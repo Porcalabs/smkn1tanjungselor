@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - SMK Negeri 1 Tanjung Selor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #eab308;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .contact-input {
+            transition: all 0.3s ease;
+        }
+
+        .contact-input:focus {
+            border-color: #1e3a8a;
+            box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+    <div class="min-h-screen flex flex-col">
+
+        <!-- HEADER -->
+        <div id="header-include"></div>
+
+        <!-- HERO SECTION -->
+        <section class="bg-blue-900 py-24 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 text-yellow-400">
+                <i data-lucide="message-square"
+                    class="absolute -right-24 -bottom-24 opacity-20 w-[450px] h-[450px]"></i>
+                <i data-lucide="phone" class="absolute -left-20 -top-20 opacity-10 w-[300px] h-[300px]"></i>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+                <h2 class="text-5xl font-black text-white mb-6 italic uppercase tracking-tighter">Hubungi Kami</h2>
+                <p class="text-blue-100 max-w-2xl mx-auto font-medium text-lg leading-relaxed">
+                    Punya pertanyaan tentang PPDB, Kerjasama Industri, atau informasi lainnya? Kami siap membantu Anda.
+                </p>
+                <nav
+                    class="flex text-blue-200 text-sm font-bold uppercase tracking-widest justify-center items-center gap-2 mt-10">
+                    <a href="index.html" class="hover:text-yellow-400 transition-colors">Beranda</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 shrink-0"></i>
+                    <span class="text-white uppercase tracking-tighter">Kontak & Lokasi</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- CONTACT CONTENT -->
+        <main class="flex-grow max-w-7xl mx-auto px-4 py-20 w-full">
+            <div class="grid lg:grid-cols-12 gap-16">
+
+                <!-- Left: Contact Info -->
+                <div class="lg:col-span-5 space-y-12">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-1 bg-yellow-500 rounded-full"></div>
+                            <span class="text-blue-900 font-black tracking-[0.3em] uppercase text-xs">Informasi
+                                Kontak</span>
+                        </div>
+                        <h3 class="text-4xl font-black text-blue-950 uppercase italic tracking-tighter">
+                            Mari Terhubung Dengan Kami
+                        </h3>
+                        <p class="text-slate-500 font-medium leading-relaxed">
+                            Datangi kantor pusat kami atau hubungi melalui saluran komunikasi digital untuk respon yang
+                            lebih cepat.
+                        </p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-6 group">
+                            <div
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center text-blue-900 shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-all duration-300">
+                                <i data-lucide="map-pin" class="w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-black text-blue-950 uppercase tracking-widest text-xs mb-2">Lokasi
+                                    Sekolah</h5>
+                                <p class="text-slate-600 font-bold leading-relaxed italic">
+                                    SKIP 1 TANJUNG SELOR, Tanjung Selor Hilir, Kec. Tanjung Selor, Kab. Bulungan,
+                                    Kalimantan Utara
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6 group">
+                            <div
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center text-blue-900 shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-all duration-300">
+                                <i data-lucide="phone-call" class="w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-black text-blue-950 uppercase tracking-widest text-xs mb-2">Telepon /
+                                    Fax</h5>
+                                <p class="text-slate-600 font-bold leading-relaxed italic">(0552) 21xxx / (0552) 21xxx
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6 group">
+                            <div
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center text-blue-900 shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-all duration-300">
+                                <i data-lucide="mail" class="w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-black text-blue-950 uppercase tracking-widest text-xs mb-2">Email Resmi
+                                </h5>
+                                <p class="text-slate-600 font-bold leading-relaxed italic">info@smkn1tanjungselor.sch.id
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6 group">
+                            <div
+                                class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center text-blue-900 shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-all duration-300">
+                                <i data-lucide="clock" class="w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-black text-blue-950 uppercase tracking-widest text-xs mb-2">Jam
+                                    Operasional</h5>
+                                <p class="text-slate-600 font-bold leading-relaxed italic">Senin - Jumat: 07:30 - 16:00
+                                    WITA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="pt-10 border-t border-slate-200">
+                        <h5 class="font-black text-slate-400 uppercase tracking-[0.2em] text-[10px] mb-6">Ikuti Kami di
+                            Media Sosial</h5>
+                        <div class="flex gap-4">
+                            <div
+                                class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center hover:bg-yellow-500 hover:text-blue-900 transition-all cursor-pointer group">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </div>
+                            <div
+                                class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center hover:bg-yellow-500 hover:text-blue-900 transition-all cursor-pointer group">
+                                <i data-lucide="youtube" class="w-5 h-5"></i>
+                            </div>
+                            <div
+                                class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center hover:bg-yellow-500 hover:text-blue-900 transition-all cursor-pointer group">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </div>
+                            <div
+                                class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center hover:bg-yellow-500 hover:text-blue-900 transition-all cursor-pointer group">
+                                <i data-lucide="twitter" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="lg:col-span-7">
+                    <div
+                        class="bg-white rounded-[3rem] p-10 md:p-14 shadow-2xl shadow-blue-900/5 border border-slate-100 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-10 -mt-10"></div>
+
+                        <h4 class="text-2xl font-black text-blue-950 uppercase tracking-tighter mb-8 italic">Kirim Pesan
+                        </h4>
+
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">Nama
+                                        Lengkap</label>
+                                    <input type="text" required
+                                        class="w-full px-6 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl contact-input outline-none font-bold text-slate-700"
+                                        placeholder="Contoh: Budi Santoso">
+                                </div>
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">Alamat
+                                        Email</label>
+                                    <input type="email" required
+                                        class="w-full px-6 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl contact-input outline-none font-bold text-slate-700"
+                                        placeholder="budi@example.com">
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label
+                                    class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">Subjek
+                                    Pesan</label>
+                                <select
+                                    class="w-full px-6 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl contact-input outline-none font-bold text-slate-700 appearance-none">
+                                    <option>Informasi Umum</option>
+                                    <option>Pertanyaan PPDB</option>
+                                    <option>Kerjasama Industri</option>
+                                    <option>Pengaduan Layanan</option>
+                                    <option>Lainnya</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">Isi
+                                    Pesan Anda</label>
+                                <textarea rows="5" required
+                                    class="w-full px-6 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl contact-input outline-none font-bold text-slate-700 resize-none"
+                                    placeholder="Tuliskan pesan atau pertanyaan Anda di sini..."></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full py-5 bg-blue-900 text-yellow-400 font-black rounded-[1.5rem] shadow-xl shadow-blue-900/20 hover:bg-blue-800 transition-all uppercase tracking-[0.2em] text-sm flex items-center justify-center gap-3">
+                                <i data-lucide="send" class="w-[18px] h-[18px]"></i>
+                                Kirim Sekarang
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="mt-32">
+                <div class="flex flex-col items-center mb-12 text-center">
+                    <i data-lucide="map" class="w-10 h-10 text-blue-900 mb-4"></i>
+                    <h3 class="text-3xl font-black text-blue-950 uppercase italic tracking-tighter">Lokasi Kampus Kami
+                    </h3>
+                    <p class="text-slate-500 font-medium mt-2">Kunjungi kami langsung untuk melihat fasilitas pendidikan
+                        terbaik kami.</p>
+                </div>
+
+                <div class="w-full aspect-[21/9] rounded-[4rem] border-8 border-white shadow-2xl overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.9080544854546!2d117.36154477581363!3d2.8428773549572566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3213ce2056edb273%3A0x685b296a2b8c0611!2sSMK%20Negeri%201%20Tg.%20Selor!5e0!3m2!1sid!2sid!4v1773025203620!5m2!1sid!2sid"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <div id="footer-include"></div>
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", async function () {
+            const base = document.body.getAttribute("data-base") || "";
+
+            async function loadInto(id, file) {
+                const el = document.getElementById(id);
+                if (!el) return;
+
+                const res = await fetch(base + file);
+                const html = await res.text();
+                el.innerHTML = html;
+            }
+
+            await loadInto("header-include", "components/header.html");
+            await loadInto("footer-include", "components/footer.html");
+
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+
+            const mobileMenuButton = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener("click", function () {
+                    mobileMenu.classList.toggle("hidden");
+                    mobileMenu.classList.toggle("flex");
+                });
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuButton = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener("click", function () {
+                    mobileMenu.classList.toggle("hidden");
+                    mobileMenu.classList.toggle("flex");
+                });
+            }
+
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>
