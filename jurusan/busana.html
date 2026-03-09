@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurusan Busana - SMK Negeri 1 Tanjung Selor</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #eab308;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .content-rich-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .sidebar-link.active {
+            background: #fefce8;
+            color: #a16207;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-slate-50 flex flex-col">
+
+    <div id="header-include"></div>
+
+    <section class="bg-blue-900 py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-400 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <h2 class="text-4xl font-black text-white mb-4">Jurusan Pemasaran</h2>
+            <nav class="flex text-blue-200 text-sm font-bold uppercase tracking-widest items-center gap-2">
+                <a href="../index.html" class="hover:text-yellow-400">Beranda</a>
+                <span>/</span>
+                <a href="index.html" class="hover:text-yellow-400">Jurusan</a>
+                <span>/</span>
+                <span class="text-white">Busana</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-16 w-full">
+        <div class="grid lg:grid-cols-12 gap-12">
+            <div id="sidebar-include" class="lg:col-span-3"></div>
+
+            <article class="lg:col-span-9 bg-white rounded-[2.5rem] shadow-sm border border-slate-200 p-8 md:p-12">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-1 bg-yellow-500 rounded-full"></div>
+                    <span class="text-blue-900 font-black tracking-widest uppercase text-xs">Kompetensi Keahlian</span>
+                </div>
+
+                <div class="space-y-10 text-slate-700">
+                    <div>
+                        <h3 class="text-3xl font-black text-blue-950 mb-6 uppercase italic tracking-tighter">
+                            Busana
+                        </h3>
+
+                        <div
+                            class="aspect-video bg-slate-100 rounded-3xl mb-8 overflow-hidden border-4 border-slate-50 shadow-inner flex items-center justify-center text-slate-300">
+                        </div>
+
+                        <p class="text-lg leading-relaxed font-medium">
+                            Jurusan Busana di SMK Negeri 1 Tanjung Selor mempersiapkan siswa untuk menjadi profesional di bidang desain dan produksi busana. Kurikulum kami mencakup teknik menjahit, desain fashion, pemilihan bahan, dan tren mode terkini. Siswa akan belajar melalui praktik langsung di bengkel busana yang dilengkapi dengan peralatan modern, serta mendapatkan kesempatan untuk berkolaborasi dengan industri fashion lokal. Lulusan kami siap untuk memasuki dunia kerja sebagai desainer busana, penjahit profesional, atau bahkan memulai usaha sendiri di industri fashion.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div
+                            class="p-8 bg-blue-50 rounded-[2rem] border border-blue-100 relative group overflow-hidden">
+                            <i data-lucide="award"
+                                class="absolute -right-5 -top-5 opacity-10 text-blue-900 group-hover:scale-110 transition-transform w-16 h-16"></i>
+                            <h4 class="font-black text-blue-900 text-lg uppercase tracking-widest mb-4">Ketua Jurusan
+                            </h4>
+
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-blue-400 shadow-sm border border-blue-200">
+                                    <i data-lucide="user" class="w-8 h-8"></i>
+                                </div>
+                                <div>
+                                    <p class="font-black text-blue-950 italic">Ambo Saka, S.Pd.</p>
+                                    <p class="text-[10px] text-blue-700 font-black uppercase tracking-widest">Penanggung
+                                        Jawab MPLB</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-8 bg-yellow-50 rounded-[2rem] border border-yellow-100 flex flex-col justify-center">
+                            <h4 class="font-black text-yellow-700 text-lg uppercase tracking-widest mb-2">Akreditasi
+                            </h4>
+                            <p class="text-3xl font-black text-blue-950">GRADE A</p>
+                            <p class="text-xs font-bold text-yellow-600 mt-1">Standar Nasional Perkantoran Modern</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h4
+                            class="text-xl font-black text-blue-950 uppercase italic tracking-tighter flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-yellow-500 w-5 h-5"></i>
+                            Materi Pembelajaran Utama
+                        </h4>
+
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div
+                                class="px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl font-bold text-sm text-slate-700 hover:border-yellow-500 transition-all flex items-center gap-3">
+                                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                Otomatisasi Tata Kelola Perkantoran
+                            </div>
+
+                            <div
+                                class="px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl font-bold text-sm text-slate-700 hover:border-yellow-500 transition-all flex items-center gap-3">
+                                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                Kearsipan Digital
+                            </div>
+
+                            <div
+                                class="px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl font-bold text-sm text-slate-700 hover:border-yellow-500 transition-all flex items-center gap-3">
+                                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                Korespondensi Bisnis
+                            </div>
+
+                            <div
+                                class="px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl font-bold text-sm text-slate-700 hover:border-yellow-500 transition-all flex items-center gap-3">
+                                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                Humas & Keprotokolan
+                            </div>
+
+                            <div
+                                class="px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl font-bold text-sm text-slate-700 hover:border-yellow-500 transition-all flex items-center gap-3">
+                                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                Manajemen Sumber Daya Manusia
+                            </div>
+
+                            <div
+                                class="px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl font-bold text-sm text-slate-700 hover:border-yellow-500 transition-all flex items-center gap-3">
+                                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                Teknologi Layanan Bisnis
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 rounded-[2.5rem] p-10 text-white relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full"></div>
+
+                        <h4 class="text-xl font-black text-yellow-400 uppercase italic tracking-tighter mb-6">
+                            Fasilitas Praktik
+                        </h4>
+
+                        <div class="grid sm:grid-cols-2 gap-6 relative z-10">
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                                    <i data-lucide="monitor" class="w-5 h-5 text-yellow-400"></i>
+                                </div>
+                                <p class="text-sm font-medium leading-relaxed">
+                                    Lab Perkantoran yang dilengkapi dengan perangkat lunak administrasi terbaru dan
+                                    peralatan kantor modern.
+                                </p>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                                    <i data-lucide="printer" class="w-5 h-5 text-yellow-400"></i>
+                                </div>
+                                <p class="text-sm font-medium leading-relaxed">
+                                    Unit Praktik Pengelolaan Dokumen dan Kearsipan Digital sesuai standar industri.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="flex gap-4">
+                            <div
+                                class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-400 hover:bg-yellow-500 hover:text-white transition-all cursor-pointer">
+                                <i data-lucide="share-2" class="w-[18px] h-[18px]"></i>
+                            </div>
+
+                            <div
+                                class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-400 hover:bg-blue-900 hover:text-white transition-all cursor-pointer">
+                                <i data-lucide="printer" class="w-[18px] h-[18px]"></i>
+                            </div>
+                        </div>
+
+                        <a href="index.html"
+                            class="text-xs font-black uppercase tracking-widest text-blue-900 flex items-center gap-2 hover:text-yellow-600 transition-colors">
+                            Kembali ke Beranda
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <div id="footer-include"></div>
+
+    <script>
+        async function loadIncludes() {
+            const header = await fetch('../components/header.html').then(res => res.text());
+            document.getElementById('header-include').innerHTML = header;
+
+            const sidebar = await fetch('../components/sidebar-jurusan.html').then(res => res.text());
+            document.getElementById('sidebar-include').innerHTML = sidebar;
+
+            const footer = await fetch('../components/footer.html').then(res => res.text());
+            document.getElementById('footer-include').innerHTML = footer;
+
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                });
+            }
+
+            const currentPage = window.location.pathname.split('/').pop();
+            const sidebarLinks = document.querySelectorAll('#sidebar-include a');
+
+            sidebarLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage) {
+                    link.classList.add('active');
+                    link.classList.add('sidebar-link');
+                } else {
+                    link.classList.add('sidebar-link');
+                }
+            });
+        }
+
+        loadIncludes();
+    </script>
+</body>
+
+</html>

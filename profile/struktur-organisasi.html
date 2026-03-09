@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi Misi - SMK Negeri 1 Tanjung Selor</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #eab308;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .content-rich-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .sidebar-link.active {
+            background: #fefce8;
+            color: #a16207;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-slate-50 flex flex-col">
+
+    <div id="header-include"></div>
+
+    <section class="bg-blue-900 py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-400 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <h2 class="text-4xl font-black text-white mb-4">Sejarah Sekolah</h2>
+            <nav class="flex text-blue-200 text-sm font-bold uppercase tracking-widest items-center gap-2">
+                <a href="../index.html" class="hover:text-yellow-400">Beranda</a>
+                <span>/</span>
+                <a href="index.html" class="hover:text-yellow-400">Profil</a>
+                <span>/</span>
+                <span class="text-white">Sejarah</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-16 w-full">
+        <div class="grid lg:grid-cols-12 gap-12">
+            <div id="sidebar-include" class="lg:col-span-3"></div>
+
+            <article class="lg:col-span-9 bg-white rounded-[2.5rem] shadow-sm border border-slate-200 p-6 md:p-12">
+
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
+                    <div class="max-w-2xl">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-1 bg-yellow-500 rounded-full"></div>
+                            <span class="text-blue-900 font-black tracking-widest uppercase text-xs">Pendidik &
+                                Kependidikan</span>
+                        </div>
+                        <h3 class="text-3xl font-black text-blue-950 uppercase italic tracking-tighter">
+                            Daftar Tenaga Pendidik & Kependidikan
+                        </h3>
+                        <p class="text-slate-500 mt-2 font-medium">
+                            Informasi resmi mengenai seluruh dewan guru dan staf tata usaha SMK Negeri 1 Tanjung Selor
+                            tahun 2025.
+                        </p>
+                    </div>
+
+                    <div class="bg-blue-50 px-6 py-4 rounded-2xl border border-blue-100 flex items-center gap-4">
+                        <i data-lucide="users" class="text-blue-900 w-8 h-8"></i>
+                        <div>
+                            <p class="text-[10px] font-black uppercase text-blue-900 opacity-60">Total Staff</p>
+                            <p class="text-[10px] font-black text-blue-900">67 Orang</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABEL DATA -->
+                <div class="table-container border border-slate-200 rounded-3xl shadow-inner overflow-x-auto">
+                    <table class="w-full text-xs">
+                        <!--
+[Nama Lengkap & Gelar]                      
+Fransiska Andayani, S.Pd.
+Totok Nadi Hermanto, S.E.
+Ahmad Winarno, S.Pd.
+Agustinus Rantetampang, S.Pd.
+Erik Setiya Prambudi, S.Pd.
+Bertha Melka, S.Pd.
+Ambo Saka, S.Pd.
+Guning Srinanik, S.Pd.
+M. Amin, S.Pd.
+Sundari Uliyanti, S.Pd.
+Endang Susilawati, S.Pd.
+Lilik Sugiarti, S.Pd.
+Eny Siti Suwarti, S.Pd.
+Novel Elias, S.Th.
+Kamal Duwila, M.A.
+Samsir Alam, S.Ag.
+Marius Randan Kali, S.S., M.Pd.
+Sahati, S.Pd.
+Kartini, S.Pd.
+Sudarmin, S.Ag.., M.Pd.I.
+Binyamin Laing, S.Pd.,Gr.
+Seno, S.Pd.
+Syamsiah, S.Pd.
+Lyly Pasaribu, S.Pd.
+Sri Asmarani, S.Pd.
+Erni Wijayanti, S.Pd.
+Sri Mulyani, S.Pd.,Gr.
+Elya Ikin, S. Th
+Rusmin Mauliddin, S.Pd.,Gr.
+Nirwana Tambunan, S,Pd.
+Durrotul Machfiyyah, S.Pd.
+Relisma Sitanggang, S.Pd.
+Nuraini, S.Pd.
+Zainab Huriyyatul Fikri, S.Pd.
+Susilawati, S.Pd.
+Lina Indriani Agustin, S.Pd.
+Fachrial Saputra, S.Pd.
+Regina Belopa,S.Ag.
+Haris, S.Kom.
+Berliana Haloho, S.Pd.
+Yonif Rimba Cahyani, S.Pd.
+Ulya Setiyawan, S.Sn.,Gr.
+Anang Al Marzak, S.Pd.
+Arta Adi Nugraha, S.Pd.,Gr.
+Sri Wahyudiani, S.Pd.
+Dhani, S.E, Par.
+Ester, S.Pd.
+Tiyadza Abdullah, S.Pd.
+Niken Saraswaty, S.Par.
+Andi Mutmainna, S.E.
+Matahari
+Salmiati Talib
+Toni Suhartono
+Lina Udini, A.Md.
+Syaed Syeh Alkap, S.Pd.
+Linda Saalino, S.Pd.
+Devi Lestari Djarru, S.Pd.
+Mira Awalina
+Sulham
+Juma'an Amani
+Septianus
+Novi Harianto
+Samsul Arifin
+Sabaruddin
+Cholis Anwar
+
+[Jabatan]
+Guru Madya
+Guru Madya
+Guru Madya
+Guru Muda
+Guru Muda
+Guru Madya
+Guru Madya
+Guru Madya
+Guru Madya
+Guru Madya
+Guru Madya
+Guru Madya
+Guru Madya
+Guru Madya
+Guru Madya
+Guru Madya
+Guru Madya
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Muda
+Guru Pertama
+Guru Pertama
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+GTT
+GTT
+Pengadministrasi Umum
+Pengadministrasi Umum
+Pengadministrasi Umum
+Pengadministrasi Umum
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+PPPK
+PTT
+
+[Mapel / Bidang]
+Kepala Sekolah
+Akuntansi
+Bahasa Inggris
+Matematika
+PJOK
+Bahasa Indonesia
+Administrasi Perkantoran
+Bahasa Indonesia
+Akuntansi
+IPAS
+Administrasi Perkantoran
+Pemasaran
+PKN
+Pend. Agama Kristen
+Pend. Agama Islam
+Pend. Agama Islam
+Bahasa Inggris
+IPAS
+Administrasi Perkantoran
+Pend. Agama Islam
+Bahasa Inggris
+Akuntansi
+Akuntansi
+Busana
+Bimbingan Konseling
+TIK
+Bahasa Indonesia
+Pend. Agama Kristen
+PKN
+Pemasaran
+Usaha Layanan Pariwisata
+Pemasaran
+Perhotelan
+Busana
+Usaha Layanan Pariwisata
+Matematika
+Bahasa Inggris
+Pend. Agama Katolik
+TIK
+Pendidikan Tata Boga
+Pendidikan Tata Busana
+Seni Budaya
+Bimbingan Konseling
+Bimbingan Konseling
+Pendidikan Tata Boga
+Perhotelan
+Pemasaran
+Pend. Agama Islam
+Usaha Layanan Pariwisata
+Tenaga Perpustakaan
+Tenaga Administrasi
+Tenaga Administrasi
+Tenaga Administrasi
+Tenaga Administrasi
+Tenaga Administrasi
+Tenaga Administrasi
+Tenaga Administrasi
+Tenaga Perpustakaan
+Tenaga Perpustakaan
+Tenaga Kebersihan
+Tenaga Kebersihan
+Tenaga Kebersihan
+Satpam
+Satpam
+Satpam
+
+
+[Tugas Tambahan]
+-
+Wakasek Kurikulum
+Wakasek Kesiswaan
+Wakasek Humas
+Wakasek SarPras
+Kepala Perpustakaan
+-
+-
+-
+-
+Kepala Program Keahlian MPLB
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+Kepala Program Keahlian Akuntansi
+-
+-
+Kepala Program Keahlian Kuliner
+-
+-
+-
+Kepala Program Keahlian Pemasaran
+Kepala Program Keahlian ULP
+-
+Kepala Program Keahlian Perhotelan
+-
+-
+-
+-
+-
+-
+-
+Kepala Program Keahlian Tata Busana
+-
+Pembina OSIS
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+
+
+-->
+
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-3">No</th>
+                                <th class="px-4 py-3">Nama Lengkap & Gelar</th>
+                                <th class="px-4 py-3">Jabatan</th>
+                                <th class="px-4 py-3">Mapel / Bidang</th>
+                                <th class="px-4 py-3">Tugas Tambahan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">1</td>
+                                <td class="px-4 py-3 font-black text-blue-900">Fransiska Andayani, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Kepala Sekolah</td>
+                                <td class="px-4 py-3 italic">-</td>
+                            </tr>
+                        <tbody>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">1</td>
+                                <td class="px-4 py-3 font-black text-blue-900">Fransiska Andayani, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Kepala Sekolah</td>
+                                <td class="px-4 py-3 italic">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">2</td>
+                                <td class="px-4 py-3 font-black text-blue-900">Totok Nadi Hermanto, S.E.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Akuntansi</td>
+                                <td class="px-4 py-3">Wakasek Kurikulum</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">3</td>
+                                <td class="px-4 py-3 font-black text-blue-900">Ahmad Winarno, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Bahasa Inggris</td>
+                                <td class="px-4 py-3">Wakasek Kesiswaan</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">4</td>
+                                <td class="px-4 py-3 font-black text-blue-900">Agustinus Rantetampang, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Matematika</td>
+                                <td class="px-4 py-3">Wakasek Humas</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">5</td>
+                                <td class="px-4 py-3 font-black text-blue-900">Erik Setiya Prambudi, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">PJOK</td>
+                                <td class="px-4 py-3">Wakasek SarPras</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">6</td>
+                                <td class="px-4 py-3 font-black text-blue-900">Bertha Melka, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Bahasa Indonesia</td>
+                                <td class="px-4 py-3">Kepala Perpustakaan</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">7</td>
+                                <td class="px-4 py-3 font-black text-blue-900">Ambo Saka, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Administrasi Perkantoran</td>
+                                <td class="px-4 py-3 italic">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">8</td>
+                                <td class="px-4 py-3 font-black">Guning Srinanik, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Bahasa Indonesia</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">9</td>
+                                <td class="px-4 py-3 font-black">M. Amin, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Akuntansi</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">10</td>
+                                <td class="px-4 py-3 font-black">Sundari Uliyanti, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">IPAS</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">11</td>
+                                <td class="px-4 py-3 font-black">Endang Susilawati, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Administrasi Perkantoran</td>
+                                <td class="px-4 py-3">Kepala Program Keahlian MPLB</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">12</td>
+                                <td class="px-4 py-3 font-black">Lilik Sugiarti, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Pemasaran</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">13</td>
+                                <td class="px-4 py-3 font-black">Eny Siti Suwarti, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">PKN</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">14</td>
+                                <td class="px-4 py-3 font-black">Novel Elias, S.Th.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Pend. Agama Kristen</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">15</td>
+                                <td class="px-4 py-3 font-black">Kamal Duwila, M.A.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Pend. Agama Islam</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">16</td>
+                                <td class="px-4 py-3 font-black">Samsir Alam, S.Ag.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Pend. Agama Islam</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">17</td>
+                                <td class="px-4 py-3 font-black">Marius Randan Kali, S.S., M.Pd.</td>
+                                <td class="px-4 py-3">Guru Madya</td>
+                                <td class="px-4 py-3">Bahasa Inggris</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">18</td>
+                                <td class="px-4 py-3 font-black">Sahati, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">IPAS</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">19</td>
+                                <td class="px-4 py-3 font-black">Kartini, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Administrasi Perkantoran</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">20</td>
+                                <td class="px-4 py-3 font-black">Sudarmin, S.Ag., M.Pd.I.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Pend. Agama Islam</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">21</td>
+                                <td class="px-4 py-3 font-black">Binyamin Laing, S.Pd.,Gr.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Bahasa Inggris</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">22</td>
+                                <td class="px-4 py-3 font-black">Seno, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Akuntansi</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">23</td>
+                                <td class="px-4 py-3 font-black">Syamsiah, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Akuntansi</td>
+                                <td class="px-4 py-3">Kepala Program Keahlian Akuntansi</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">24</td>
+                                <td class="px-4 py-3 font-black">Lyly Pasaribu, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Busana</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">25</td>
+                                <td class="px-4 py-3 font-black">Sri Asmarani, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Bimbingan Konseling</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">26</td>
+                                <td class="px-4 py-3 font-black">Erni Wijayanti, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">TIK</td>
+                                <td class="px-4 py-3">Kepala Program Keahlian Kuliner</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">27</td>
+                                <td class="px-4 py-3 font-black">Sri Mulyani, S.Pd.,Gr.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Bahasa Indonesia</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">28</td>
+                                <td class="px-4 py-3 font-black">Elya Ikin, S. Th</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Pend. Agama Kristen</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">29</td>
+                                <td class="px-4 py-3 font-black">Rusmin Mauliddin, S.Pd.,Gr.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">PKN</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">30</td>
+                                <td class="px-4 py-3 font-black">Nirwana Tambunan, S,Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Pemasaran</td>
+                                <td class="px-4 py-3">Kepala Program Keahlian Pemasaran</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">31</td>
+                                <td class="px-4 py-3 font-black">Durrotul Machfiyyah, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Usaha Layanan Pariwisata</td>
+                                <td class="px-4 py-3">Kepala Program Keahlian ULP</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">32</td>
+                                <td class="px-4 py-3 font-black">Relisma Sitanggang, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Pemasaran</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">33</td>
+                                <td class="px-4 py-3 font-black">Nuraini, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Perhotelan</td>
+                                <td class="px-4 py-3">Kepala Program Keahlian Perhotelan</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">34</td>
+                                <td class="px-4 py-3 font-black">Zainab Huriyyatul Fikri, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Busana</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">35</td>
+                                <td class="px-4 py-3 font-black">Susilawati, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Muda</td>
+                                <td class="px-4 py-3">Usaha Layanan Pariwisata</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">36</td>
+                                <td class="px-4 py-3 font-black">Lina Indriani Agustin, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Pertama</td>
+                                <td class="px-4 py-3">Matematika</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">37</td>
+                                <td class="px-4 py-3 font-black">Fachrial Saputra, S.Pd.</td>
+                                <td class="px-4 py-3">Guru Pertama</td>
+                                <td class="px-4 py-3">Bahasa Inggris</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">38</td>
+                                <td class="px-4 py-3 font-black">Regina Belopa,S.Ag.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Pend. Agama Katolik</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">39</td>
+                                <td class="px-4 py-3 font-black">Haris, S.Kom.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">TIK</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">40</td>
+                                <td class="px-4 py-3 font-black">Berliana Haloho, S.Pd.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Pendidikan Tata Boga</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">41</td>
+                                <td class="px-4 py-3 font-black">Yonif Rimba Cahyani, S.Pd.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Pendidikan Tata Busana</td>
+                                <td class="px-4 py-3">Kepala Program Keahlian Tata Busana</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">42</td>
+                                <td class="px-4 py-3 font-black">Ulya Setiyawan, S.Sn.,Gr.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Seni Budaya</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">43</td>
+                                <td class="px-4 py-3 font-black">Anang Al Marzak, S.Pd.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Bimbingan Konseling</td>
+                                <td class="px-4 py-3">Pembina OSIS</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">44</td>
+                                <td class="px-4 py-3 font-black">Arta Adi Nugraha, S.Pd.,Gr.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Bimbingan Konseling</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">45</td>
+                                <td class="px-4 py-3 font-black">Sri Wahyudiani, S.Pd.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Pendidikan Tata Boga</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">46</td>
+                                <td class="px-4 py-3 font-black">Dhani, S.E, Par.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Perhotelan</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">47</td>
+                                <td class="px-4 py-3 font-black">Ester, S.Pd.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Pemasaran</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">48</td>
+                                <td class="px-4 py-3 font-black">Tiyadza Abdullah, S.Pd.</td>
+                                <td class="px-4 py-3">GTT</td>
+                                <td class="px-4 py-3">Pend. Agama Islam</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr class="bg-blue-50 font-bold">
+                                <td colspan="5"
+                                    class="text-blue-900 uppercase text-center py-4 tracking-widest text-xs">
+                                    Tenaga Kependidikan / Administrasi
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">49</td>
+                                <td class="px-4 py-3 font-black">Niken Saraswaty, S.Par.</td>
+                                <td class="px-4 py-3">GTT</td>
+                                <td class="px-4 py-3">Usaha Layanan Pariwisata</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">50</td>
+                                <td class="px-4 py-3 font-black">Andi Mutmainna, S.E.</td>
+                                <td class="px-4 py-3">Pengadministrasi Umum</td>
+                                <td class="px-4 py-3">Tenaga Perpustakaan</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">51</td>
+                                <td class="px-4 py-3 font-black">Matahari</td>
+                                <td class="px-4 py-3">Pengadministrasi Umum</td>
+                                <td class="px-4 py-3">Tenaga Administrasi</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">52</td>
+                                <td class="px-4 py-3 font-black">Salmiati Talib</td>
+                                <td class="px-4 py-3">Pengadministrasi Umum</td>
+                                <td class="px-4 py-3">Tenaga Administrasi</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">53</td>
+                                <td class="px-4 py-3 font-black">Toni Suhartono</td>
+                                <td class="px-4 py-3">Pengadministrasi Umum</td>
+                                <td class="px-4 py-3">Tenaga Administrasi</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">54</td>
+                                <td class="px-4 py-3 font-black">Lina Udini, A.Md.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Tenaga Administrasi</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">55</td>
+                                <td class="px-4 py-3 font-black">Syaed Syeh Alkap, S.Pd.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Tenaga Administrasi</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">56</td>
+                                <td class="px-4 py-3 font-black">Linda Saalino, S.Pd.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Tenaga Administrasi</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">57</td>
+                                <td class="px-4 py-3 font-black">Devi Lestari Djarru, S.Pd.</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Tenaga Perpustakaan</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">58</td>
+                                <td class="px-4 py-3 font-black">Mira Awalina</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Tenaga Perpustakaan</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">59</td>
+                                <td class="px-4 py-3 font-black">Sulham</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Tenaga Kebersihan</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">60</td>
+                                <td class="px-4 py-3 font-black">Juma'an Amani</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Tenaga Kebersihan</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">61</td>
+                                <td class="px-4 py-3 font-black">Septianus</td>
+                                <td class="px-4 py-3">PPPK</td>
+                                <td class="px-4 py-3">Tenaga Kebersihan</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">62</td>
+                                <td class="px-4 py-3 font-black">Novi Harianto</td>
+                                <td class="px-4 py-3">PTT</td>
+                                <td class="px-4 py-3">Satpam</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">63</td>
+                                <td class="px-4 py-3 font-black">Samsul Arifin</td>
+                                <td class="px-4 py-3">PTT</td>
+                                <td class="px-4 py-3">Satpam</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">64</td>
+                                <td class="px-4 py-3 font-black">Sabaruddin</td>
+                                <td class="px-4 py-3">PTT</td>
+                                <td class="px-4 py-3">Satpam</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-bold">65</td>
+                                <td class="px-4 py-3 font-black">Cholis Anwar</td>
+                                <td class="px-4 py-3">PTT</td>
+                                <td class="px-4 py-3">Satpam</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div
+                    class="mt-12 flex flex-col md:flex-row items-center justify-between gap-6 pt-12 border-t border-slate-100">
+                    <p class="text-sm text-slate-400 font-bold italic">Terakhir diperbarui: November 2025</p>
+                    <div class="flex gap-4">
+                        <button
+                            class="px-6 py-3 bg-slate-100 text-slate-600 font-black rounded-xl hover:bg-slate-200 transition-colors uppercase text-[10px] tracking-widest">
+                            Cetak Daftar
+                        </button>
+                        <button
+                            class="px-6 py-3 bg-blue-900 text-white font-black rounded-xl hover:bg-blue-800 transition-colors uppercase text-[10px] tracking-widest shadow-lg">
+                            Unduh PDF
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <div id="footer-include"></div>
+
+    <script>
+        async function loadIncludes() {
+            const header = await fetch('../components/header.html').then(res => res.text());
+            document.getElementById('header-include').innerHTML = header;
+
+            const sidebar = await fetch('../components/sidebar-profile.html').then(res => res.text());
+            document.getElementById('sidebar-include').innerHTML = sidebar;
+
+            const footer = await fetch('../components/footer.html').then(res => res.text());
+            document.getElementById('footer-include').innerHTML = footer;
+
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                });
+            }
+
+            const currentPage = window.location.pathname.split('/').pop();
+            const sidebarLinks = document.querySelectorAll('#sidebar-include a');
+
+            sidebarLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage) {
+                    link.classList.add('active');
+                    link.classList.add('sidebar-link');
+                } else {
+                    link.classList.add('sidebar-link');
+                }
+            });
+        }
+
+        loadIncludes();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi Misi - SMK Negeri 1 Tanjung Selor</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #eab308;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .content-rich-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .sidebar-link.active {
+            background: #fefce8;
+            color: #a16207;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-slate-50 flex flex-col">
+
+    <div id="header-include"></div>
+
+    <section class="bg-blue-900 py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-400 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <h2 class="text-4xl font-black text-white mb-4">Sejarah Sekolah</h2>
+            <nav class="flex text-blue-200 text-sm font-bold uppercase tracking-widest items-center gap-2">
+                <a href="../index.html" class="hover:text-yellow-400">Beranda</a>
+                <span>/</span>
+                <a href="index.html" class="hover:text-yellow-400">Profil</a>
+                <span>/</span>
+                <span class="text-white">Sejarah</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-16 w-full">
+        <div class="grid lg:grid-cols-12 gap-12">
+            <div id="sidebar-include" class="lg:col-span-3"></div>
+
+            <article class="lg:col-span-9 space-y-12">
+
+                <div class="bg-white rounded-[2.5rem] shadow-sm border border-slate-200 p-8 md:p-12">
+                    <div class="flex items-center gap-4 mb-10 text-blue-900">
+                        <div class="w-12 h-1 bg-yellow-500 rounded-full"></div>
+                        <span class="font-black tracking-widest uppercase text-xs">Arah Strategis</span>
+                    </div>
+
+                    <div class="mb-12">
+                        <h3 class="text-3xl font-black text-blue-950 mb-6 uppercase italic tracking-tighter">
+                            Tujuan SMK Negeri 1 Tanjung Selor
+                        </h3>
+
+                        <p class="text-slate-600 text-lg leading-relaxed mb-10">
+                            Berdasarkan visi dan misi yang telah ditetapkan, sekolah memiliki target-target terukur yang
+                            harus dicapai dalam kurun waktu hingga tahun 2026. Fokus utama kami adalah peningkatan
+                            karakter, kompetensi lulusan, dan penyelarasan dengan dunia kerja.
+                        </p>
+
+                        <div class="grid gap-10">
+
+                            <div class="space-y-6">
+                                <h4
+                                    class="flex items-center gap-3 font-black text-blue-900 uppercase tracking-widest text-sm">
+                                    <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                                    Pendidikan Karakter & Parenting
+                                </h4>
+
+                                <div class="grid gap-4">
+                                    <div
+                                        class="group flex gap-5 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-colors">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <p class="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
+                                            Terwujudnya pendidikan karakter melalui kemitraan pembelajaran
+                                            intrakurikuler, kokurikuler dan ekstrakurikuler.
+                                        </p>
+                                    </div>
+
+                                    <div
+                                        class="group flex gap-5 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-colors">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <p class="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
+                                            Terlaksananya kegiatan parenting yang melibatkan orang tua murid minimal 2
+                                            (dua) kali setahun.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <h4
+                                    class="flex items-center gap-3 font-black text-blue-900 uppercase tracking-widest text-sm">
+                                    <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                                    Kompetensi & Sertifikasi
+                                </h4>
+
+                                <div class="grid gap-4">
+                                    <div
+                                        class="group flex gap-5 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-colors">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <p class="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
+                                            Tercapainya 100% lulusan pada tahun 2026 yang memeroleh sertifikat
+                                            kompetensi dari BNSP.
+                                        </p>
+                                    </div>
+
+                                    <div
+                                        class="group flex gap-5 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-colors">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <p class="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
+                                            Tercapainya pelaksanaan magang industri bagi 7 (tujuh) guru konsentrasi
+                                            keahlian pada tahun 2026.
+                                        </p>
+                                    </div>
+
+                                    <div
+                                        class="group flex gap-5 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-colors">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <p class="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
+                                            Tercapainya pelaksanaan magang industri bagi murid kelas XI (sebelas) pada
+                                            tahun 2026.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <h4
+                                    class="flex items-center gap-3 font-black text-blue-900 uppercase tracking-widest text-sm">
+                                    <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                                    Prestasi & Pengembangan Diri
+                                </h4>
+
+                                <div class="grid gap-4">
+                                    <div
+                                        class="group flex gap-5 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-colors">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <p class="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
+                                            Tercapainya murid berprestasi di tingkat provinsi dan nasional pada ajang
+                                            LKS, O3SN, FLS3N, LDI, dan Kihajar pada tahun 2026.
+                                        </p>
+                                    </div>
+
+                                    <div
+                                        class="group flex gap-5 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-colors">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <p class="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
+                                            Terlaksananya program SPW (Sekolah Pencetak Wirausaha), Seribu Sales Naik
+                                            Kelas, Unit Produksi, dan Teaching Factory.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <h4
+                                    class="flex items-center gap-3 font-black text-blue-900 uppercase tracking-widest text-sm">
+                                    <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                                    Kemitraan & Hubungan Industri
+                                </h4>
+
+                                <div class="grid gap-4">
+                                    <div
+                                        class="group flex gap-5 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-colors">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <p class="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
+                                            Tercapainya perjanjian kerjasama dengan dunia kerja sejumlah 14 (empat
+                                            belas) MoU pada tahun 2026.
+                                        </p>
+                                    </div>
+
+                                    <div
+                                        class="group flex gap-5 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-colors">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <p class="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
+                                            Terlaksananya kegiatan guru tamu pada 7 (tujuh) konsentrasi keahlian secara
+                                            rutin.
+                                        </p>
+                                    </div>
+
+                                    <div
+                                        class="group flex gap-5 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-colors">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <p class="font-bold text-slate-700 leading-relaxed text-sm md:text-base">
+                                            Tercapainya peningkatan kinerja Bursa Kerja Khusus (BKK) dan terlaksananya
+                                            kegiatan Job Fair.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div
+                        class="mt-16 p-8 bg-blue-900 rounded-[2rem] text-white flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-yellow-500/5 pointer-events-none"></div>
+
+                        <div class="relative z-10">
+                            <h5 class="font-black text-xl mb-2 text-yellow-400 uppercase tracking-tighter italic">
+                                Maju Bersama Hebat Semua
+                            </h5>
+                            <p class="text-blue-100 text-sm font-medium opacity-80">
+                                Bersama kita wujudkan SMK yang bermutu dan berdaya saing global.
+                            </p>
+                        </div>
+
+                        <a href="../index.html"
+                            class="relative z-10 px-8 py-4 bg-yellow-500 text-blue-950 font-black rounded-xl hover:bg-yellow-400 transition-colors shadow-lg uppercase tracking-widest text-xs">
+                            Kembali ke Beranda
+                        </a>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <div id="footer-include"></div>
+
+    <script>
+        async function loadIncludes() {
+            const header = await fetch('../components/header.html').then(res => res.text());
+            document.getElementById('header-include').innerHTML = header;
+
+            const sidebar = await fetch('../components/sidebar-profile.html').then(res => res.text());
+            document.getElementById('sidebar-include').innerHTML = sidebar;
+
+            const footer = await fetch('../components/footer.html').then(res => res.text());
+            document.getElementById('footer-include').innerHTML = footer;
+
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                });
+            }
+
+            const currentPage = window.location.pathname.split('/').pop();
+            const sidebarLinks = document.querySelectorAll('#sidebar-include a');
+
+            sidebarLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage) {
+                    link.classList.add('active');
+                    link.classList.add('sidebar-link');
+                } else {
+                    link.classList.add('sidebar-link');
+                }
+            });
+        }
+
+        loadIncludes();
+
+    
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+
+    </script>
+</body>
+
+</html>

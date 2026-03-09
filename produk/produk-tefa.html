@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Produk Unggulan - SMK Negeri 1 Tanjung Selor</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color .3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: #eab308;
+            transition: .3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .product-card {
+            transition: all .4s cubic-bezier(.175, .885, .32, 1.275);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(30, 58, 138, .15);
+        }
+    </style>
+
+</head>
+
+<body class="bg-slate-50 flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+
+    <div id="header-include"></div>
+
+    <!-- HERO -->
+
+    <section class="bg-blue-900 py-20 text-center text-white">
+
+        <h2 class="text-5xl font-black italic uppercase tracking-tighter mb-6">
+            Produk Unggulan S1
+        </h2>
+
+        <p class="text-blue-100 max-w-2xl mx-auto">
+            Karya terbaik siswa SMK Negeri 1 Tanjung Selor melalui program Teaching Factory.
+        </p>
+
+    </section>
+
+    <!-- CONTENT -->
+
+    <main class="max-w-7xl mx-auto px-4 py-16 flex-grow">
+
+        <!-- GRID PRODUK -->
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card bg-white rounded-[2.5rem] border border-slate-200 overflow-hidden flex flex-col">
+
+                <div class="aspect-[4/3] bg-slate-100 flex items-center justify-center text-slate-300">
+                    <i data-lucide="utensils" class="w-20 h-20"></i>
+                </div>
+
+                <div class="p-8 flex flex-col flex-grow">
+
+                    <h4 class="text-2xl font-black text-blue-950 mb-3">
+                        Pastry & Bakery S1
+                    </h4>
+
+                    <p class="text-slate-500 text-sm italic mb-6">
+                        Produk roti dan kue higienis buatan siswa Kuliner.
+                    </p>
+
+                    <div class="mt-auto flex justify-between items-center pt-6 border-t">
+
+                        <div>
+                            <p class="text-xs text-slate-400">Estimasi Harga</p>
+                            <p class="text-blue-900 font-black">Mulai Rp 5.000</p>
+                        </div>
+
+                        <button
+                            class="w-12 h-12 bg-blue-900 text-yellow-400 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="shopping-cart"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card bg-white rounded-[2.5rem] border border-slate-200 overflow-hidden flex flex-col">
+
+                <div class="aspect-[4/3] bg-slate-100 flex items-center justify-center text-slate-300">
+                    <i data-lucide="shirt" class="w-20 h-20"></i>
+                </div>
+
+                <div class="p-8 flex flex-col flex-grow">
+
+                    <h4 class="text-2xl font-black text-blue-950 mb-3">
+                        Batik Khas Bulungan
+                    </h4>
+
+                    <p class="text-slate-500 text-sm italic mb-6">
+                        Batik motif lokal hasil karya siswa Busana.
+                    </p>
+
+                    <div class="mt-auto flex justify-between items-center pt-6 border-t">
+
+                        <div>
+                            <p class="text-xs text-slate-400">Estimasi Harga</p>
+                            <p class="text-blue-900 font-black">Rp150.000 - 350.000</p>
+                        </div>
+
+                        <button
+                            class="w-12 h-12 bg-blue-900 text-yellow-400 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="shopping-cart"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card bg-white rounded-[2.5rem] border border-slate-200 overflow-hidden flex flex-col">
+
+                <div class="aspect-[4/3] bg-slate-100 flex items-center justify-center text-slate-300">
+                    <i data-lucide="smartphone" class="w-20 h-20"></i>
+                </div>
+
+                <div class="p-8 flex flex-col flex-grow">
+
+                    <h4 class="text-2xl font-black text-blue-950 mb-3">
+                        Jasa Kelola Sosmed
+                    </h4>
+
+                    <p class="text-slate-500 text-sm italic mb-6">
+                        Manajemen konten media sosial dari siswa Pemasaran.
+                    </p>
+
+                    <div class="mt-auto flex justify-between items-center pt-6 border-t">
+
+                        <div>
+                            <p class="text-xs text-slate-400">Estimasi Harga</p>
+                            <p class="text-blue-900 font-black">Hubungi Kami</p>
+                        </div>
+
+                        <button
+                            class="w-12 h-12 bg-blue-900 text-yellow-400 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="shopping-cart"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <div id="footer-include"></div>
+
+    <script>
+        async function loadIncludes() {
+            const header = await fetch('../components/header.html').then(res => res.text());
+            document.getElementById('header-include').innerHTML = header;
+
+            const footer = await fetch('../components/footer.html').then(res => res.text());
+            document.getElementById('footer-include').innerHTML = footer;
+
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                });
+            }
+
+            const currentPage = window.location.pathname.split('/').pop();
+            const sidebarLinks = document.querySelectorAll('#sidebar-include a');
+
+            sidebarLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage) {
+                    link.classList.add('active');
+                    link.classList.add('sidebar-link');
+                } else {
+                    link.classList.add('sidebar-link');
+                }
+            });
+        }
+
+        loadIncludes();
+    </script>
+        
+    
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi Misi - SMK Negeri 1 Tanjung Selor</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #eab308;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .content-rich-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .sidebar-link.active {
+            background: #fefce8;
+            color: #a16207;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 flex flex-col">
+
+    <div id="header-include"></div>
+
+    <section class="bg-blue-900 py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-400 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <h2 class="text-4xl font-black text-white mb-4">Sejarah Sekolah</h2>
+            <nav class="flex text-blue-200 text-sm font-bold uppercase tracking-widest items-center gap-2">
+                <a href="../index.html" class="hover:text-yellow-400">Beranda</a>
+                <span>/</span>
+                <a href="index.html" class="hover:text-yellow-400">Profil</a>
+                <span>/</span>
+                <span class="text-white">Sejarah</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-16 w-full">
+        <div class="grid lg:grid-cols-12 gap-12">
+            <div id="sidebar-include" class="lg:col-span-3"></div>
+
+            <article class="lg:col-span-9 bg-white rounded-[2.5rem] shadow-sm border border-slate-200 p-8 md:p-12">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-1 bg-yellow-500 rounded-full"></div>
+                    <span class="text-blue-900 font-black tracking-widest uppercase text-xs">Jejak Langkah SMKN 1 TGS</span>
+                </div>
+
+                <div class="content-rich-text text-lg">
+                    <h3 class="text-3xl font-black text-blue-950 mb-6 uppercase italic tracking-tighter">
+                        Didirikan Sejak Tahun 1970
+                    </h3>
+
+                    <p>
+                        Isi sejarah sekolah di sini.
+                    </p>
+
+                    <p>
+                        Paragraf berikutnya di sini.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <div id="footer-include"></div>
+
+    <script>
+        async function loadIncludes() {
+            const header = await fetch('../components/header.html').then(res => res.text());
+            document.getElementById('header-include').innerHTML = header;
+
+            const sidebar = await fetch('../components/sidebar-profile.html').then(res => res.text());
+            document.getElementById('sidebar-include').innerHTML = sidebar;
+
+            const footer = await fetch('../components/footer.html').then(res => res.text());
+            document.getElementById('footer-include').innerHTML = footer;
+
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                });
+            }
+
+            const currentPage = window.location.pathname.split('/').pop();
+            const sidebarLinks = document.querySelectorAll('#sidebar-include a');
+
+            sidebarLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage) {
+                    link.classList.add('active');
+                    link.classList.add('sidebar-link');
+                } else {
+                    link.classList.add('sidebar-link');
+                }
+            });
+        }
+
+        loadIncludes();
+    </script>
+</body>
+</html>

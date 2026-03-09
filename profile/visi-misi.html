@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi Misi - SMK Negeri 1 Tanjung Selor</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #eab308;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .content-rich-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .sidebar-link.active {
+            background: #fefce8;
+            color: #a16207;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-slate-50 flex flex-col">
+
+    <div id="header-include"></div>
+
+    <section class="bg-blue-900 py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-400 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <h2 class="text-4xl font-black text-white mb-4">Sejarah Sekolah</h2>
+            <nav class="flex text-blue-200 text-sm font-bold uppercase tracking-widest items-center gap-2">
+                <a href="../index.html" class="hover:text-yellow-400">Beranda</a>
+                <span>/</span>
+                <a href="index.html" class="hover:text-yellow-400">Profil</a>
+                <span>/</span>
+                <span class="text-white">Sejarah</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-16 w-full">
+        <div class="grid lg:grid-cols-12 gap-12">
+            <div id="sidebar-include" class="lg:col-span-3"></div>
+
+            <article class="lg:col-span-9 space-y-12">
+
+                <!-- Section Visi -->
+                <div
+                    class="bg-white rounded-[2.5rem] shadow-sm border border-slate-200 p-8 md:p-12 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 rounded-bl-[100px]"></div>
+
+                    <div class="flex items-center gap-4 mb-10">
+                        <div class="w-12 h-1 bg-yellow-500 rounded-full"></div>
+                        <span class="text-blue-900 font-black tracking-widest uppercase text-xs">Visi Sekolah</span>
+                    </div>
+
+                    <div class="text-center max-w-2xl mx-auto">
+                        <h3 class="text-2xl font-bold text-slate-400 uppercase tracking-[0.2em] mb-4">Be ProuD</h3>
+
+                        <div
+                            class="bg-blue-900 vision-card p-10 rounded-[2rem] shadow-2xl shadow-blue-900/20 border-b-8 border-yellow-500">
+                            <p class="text-2xl md:text-3xl font-black text-white italic leading-tight">
+                                "Berkarakter Profesional, Unggul dan Selaras dengan Dunia Kerja"
+                            </p>
+                        </div>
+
+                        <p class="mt-8 text-slate-500 font-bold text-sm italic uppercase tracking-widest">
+                            Target Capaian Menyeluruh Tahun 2026
+                        </p>
+                    </div>
+
+                    <div class="mt-16 pt-10 border-t border-slate-100">
+                        <h4 class="text-blue-900 font-black text-xs uppercase tracking-widest mb-6">
+                            Arah Kebijakan Provinsi Kaltara
+                        </h4>
+                        <p class="text-slate-600 text-sm leading-relaxed italic border-l-4 border-blue-900 pl-6">
+                            "Terwujudnya Fondasi Transformasi Kalimantan Utara yang kokoh sebagai beranda depan NKRI
+                            yang Maju, Makmur dan Berkelanjutan."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Section Misi -->
+                <div class="bg-white rounded-[2.5rem] shadow-sm border border-slate-200 p-8 md:p-12">
+                    <div class="flex items-center gap-4 mb-10">
+                        <div class="w-12 h-1 bg-blue-900 rounded-full"></div>
+                        <span class="text-blue-900 font-black tracking-widest uppercase text-xs">Misi Sekolah</span>
+                    </div>
+
+                    <div class="grid gap-4">
+                        <div
+                            class="flex gap-6 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-yellow-500 transition-colors group">
+                            <div
+                                class="w-10 h-10 bg-blue-900 text-yellow-400 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-yellow-500 group-hover:text-blue-900 transition-colors">
+                                1
+                            </div>
+                            <p class="font-bold text-slate-700 leading-relaxed pt-2">
+                                Meningkatkan kualitas pembelajaran yang berkarakter, profesional, dan berorientasi pada
+                                kebutuhan dunia kerja.
+                            </p>
+                        </div>
+
+                        <div
+                            class="flex gap-6 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-yellow-500 transition-colors group">
+                            <div
+                                class="w-10 h-10 bg-blue-900 text-yellow-400 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-yellow-500 group-hover:text-blue-900 transition-colors">
+                                2
+                            </div>
+                            <p class="font-bold text-slate-700 leading-relaxed pt-2">
+                                Mengembangkan sumber daya manusia yang unggul, adaptif, kreatif, dan kompetitif.
+                            </p>
+                        </div>
+
+                        <div
+                            class="flex gap-6 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-yellow-500 transition-colors group">
+                            <div
+                                class="w-10 h-10 bg-blue-900 text-yellow-400 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-yellow-500 group-hover:text-blue-900 transition-colors">
+                                3
+                            </div>
+                            <p class="font-bold text-slate-700 leading-relaxed pt-2">
+                                Menjalin kerja sama yang sinergis dengan dunia usaha, dunia industri, dan dunia kerja.
+                            </p>
+                        </div>
+
+                        <div
+                            class="flex gap-6 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-yellow-500 transition-colors group">
+                            <div
+                                class="w-10 h-10 bg-blue-900 text-yellow-400 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-yellow-500 group-hover:text-blue-900 transition-colors">
+                                4
+                            </div>
+                            <p class="font-bold text-slate-700 leading-relaxed pt-2">
+                                Menanamkan budaya disiplin, integritas, dan semangat berprestasi dalam seluruh aktivitas
+                                sekolah.
+                            </p>
+                        </div>
+
+                        <div
+                            class="flex gap-6 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-yellow-500 transition-colors group">
+                            <div
+                                class="w-10 h-10 bg-blue-900 text-yellow-400 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-yellow-500 group-hover:text-blue-900 transition-colors">
+                                5
+                            </div>
+                            <p class="font-bold text-slate-700 leading-relaxed pt-2">
+                                Mewujudkan lingkungan sekolah yang aman, nyaman, hijau, dan mendukung proses
+                                pembelajaran berkualitas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <div id="footer-include"></div>
+
+    <script>
+        async function loadIncludes() {
+            const header = await fetch('../components/header.html').then(res => res.text());
+            document.getElementById('header-include').innerHTML = header;
+
+            const sidebar = await fetch('../components/sidebar-profile.html').then(res => res.text());
+            document.getElementById('sidebar-include').innerHTML = sidebar;
+
+            const footer = await fetch('../components/footer.html').then(res => res.text());
+            document.getElementById('footer-include').innerHTML = footer;
+
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                });
+            }
+
+            const currentPage = window.location.pathname.split('/').pop();
+            const sidebarLinks = document.querySelectorAll('#sidebar-include a');
+
+            sidebarLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage) {
+                    link.classList.add('active');
+                    link.classList.add('sidebar-link');
+                } else {
+                    link.classList.add('sidebar-link');
+                }
+            });
+        }
+
+        loadIncludes();
+    </script>
+</body>
+
+</html>

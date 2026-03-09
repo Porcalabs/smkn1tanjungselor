@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi & Misi - SMK Negeri 1 Tanjung Selor</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React & Babel CDNs -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #eab308;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .vision-card {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        const Icon = ({ name, size = 24, className = "" }) => {
+            useEffect(() => {
+                if (window.lucide) {
+                    window.lucide.createIcons();
+                }
+            }, [name]);
+            return <i data-lucide={name} className={className} style={{ width: size, height: size }}></i>;
+        };
+
+        const App = () => {
+            const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+            // Menu data sidebar (Visi Misi Aktif)
+            const menuProfil = [
+                { name: "Profil Singkat", href: "profil-singkat.html", active: false },
+                { name: "Sejarah", href: "sejarah.html", active: false },
+                { name: "Visi & Misi", href: "visi-misi.html", active: true },
+                { name: "Struktur Organisasi", href: "#", active: false }
+            ];
+
+            const missions = [
+                "Membentuk murid memiliki 8 (delapan) Dimensi Profil Lulusan",
+                "Melaksanakan program sertifikasi kompetensi bagi murid sesuai program keahlian",
+                "Melatih murid memiliki budaya kerja industri",
+                "Menghasilkan murid yang berprestasi pada bidang akademik dan non akademik",
+                "Menghasilkan murid menjadi wirausahawan baru",
+                "Meningkatkan kerjasama dengan dunia kerja",
+                "Meningkatkan keterserapan lulusan pada dunia kerja"
+            ];
+
+            const objectives = [
+                "Terwujudnya pendidikan karakter melalui kemitraan intrakurikuler dan ekstrakurikuler",
+                "Terlaksananya kegiatan parenting minimal 2 (dua) kali setahun",
+                "Tercapainya 100% lulusan bersertifikat BNSP pada tahun 2026",
+                "Tercapainya pelaksanaan magang industri bagi guru konsentrasi keahlian",
+                "Tercapainya pelaksanaan magang industri bagi murid kelas XI",
+                "Tercapainya prestasi tingkat provinsi dan nasional (LKS, O3SN, FLS3N)",
+                "Terlaksananya program SPW, Unit Produksi, dan Teaching Factory",
+                "Tercapainya 14 MoU kerjasama dengan dunia kerja pada tahun 2026",
+                "Terlaksananya kegiatan guru tamu pada 7 konsentrasi keahlian",
+                "Tercapainya peningkatan kinerja Bursa Kerja Khusus (BKK)",
+                "Terlaksananya kegiatan Job Fair secara rutin"
+            ];
+
+            return (
+                <div className="min-h-screen bg-slate-50 flex flex-col">
+                    {/* --- HEADER --- */}
+                    <nav className="sticky top-0 w-full z-50 bg-white shadow-md border-b-4 border-yellow-500">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="flex justify-between h-20 items-center">
+                                <div className="flex items-center gap-3 shrink-0">
+                                    <div className="w-12 h-12 bg-gradient-to-tr from-blue-900 to-blue-700 rounded-full flex items-center justify-center text-yellow-400 border-2 border-yellow-500 shadow-inner">
+                                        <Icon name="shield-check" size={28} />
+                                    </div>
+                                    <div className="hidden sm:block">
+                                        <h1 className="text-lg font-black leading-tight text-blue-900 flex flex-col">
+                                            <span>SMK NEGERI 1</span>
+                                            <span className="text-yellow-600 -mt-1 text-[10px] tracking-[0.2em]">TANJUNG SELOR</span>
+                                        </h1>
+                                    </div>
+                                </div>
+                                <div className="hidden md:flex items-center space-x-6 font-bold text-blue-900 text-sm">
+                                    <a href="index.html" className="nav-link">Beranda</a>
+                                    <div className="relative group py-8">
+                                        <button className="nav-link flex items-center gap-1 text-yellow-600">
+                                            Profil <Icon name="chevron-down" size={14} />
+                                        </button>
+                                    </div>
+                                    <a href="#" className="nav-link">Jurusan</a>
+                                    <a href="#" className="nav-link">Guru & Staff</a>
+                                    <a href="#" className="nav-link">Hubungi Kami</a>
+                                    <a href="#" className="px-5 py-2.5 bg-blue-900 text-yellow-400 rounded-xl shadow-lg border-b-4 border-yellow-600 flex items-center gap-2 text-xs">
+                                        <Icon name="graduation-cap" size={16} /> PPDB ONLINE
+                                    </a>
+                                </div>
+                                <div className="md:hidden">
+                                    <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 text-blue-900">
+                                        <Icon name={isMenuOpen ? "x" : "menu"} size={24} />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                    {/* --- BREADCRUMB HERO --- */}
+                    <section className="bg-blue-900 py-16 relative overflow-hidden">
+                        <div className="absolute inset-0 opacity-10">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400 rounded-full blur-3xl -mr-32 -mt-32"></div>
+                        </div>
+                        <div className="max-w-7xl mx-auto px-4 relative z-10">
+                            <h2 className="text-4xl font-black text-white mb-4">Visi, Misi & Tujuan</h2>
+                            <nav className="flex text-blue-200 text-sm font-bold uppercase tracking-widest items-center gap-2">
+                                <a href="index.html" className="hover:text-yellow-400">Beranda</a>
+                                <Icon name="chevron-right" size={14} />
+                                <span className="text-yellow-400">Profil</span>
+                                <Icon name="chevron-right" size={14} />
+                                <span className="text-white">Visi & Misi</span>
+                            </nav>
+                        </div>
+                    </section>
+
+                    {/* --- MAIN CONTENT --- */}
+                    <main className="flex-grow max-w-7xl mx-auto px-4 py-16 w-full">
+                        <div className="grid lg:grid-cols-12 gap-12">
+                            
+                            {/* Sidebar */}
+                            <aside className="lg:col-span-3 space-y-8">
+                                <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                                    <div className="bg-blue-900 p-6 text-white text-center">
+                                        <h4 className="font-black uppercase tracking-widest text-xs">Menu Profil</h4>
+                                    </div>
+                                    <div className="p-2">
+                                        {menuProfil.map((item, i) => (
+                                            <a 
+                                                key={i} 
+                                                href={item.href}
+                                                className={`flex items-center justify-between px-4 py-3 rounded-xl font-bold transition-all ${item.active ? 'bg-yellow-50 text-yellow-700' : 'text-slate-600 hover:bg-slate-50'}`}
+                                            >
+                                                {item.name}
+                                                <Icon name="chevron-right" size={16} className={item.active ? 'opacity-100' : 'opacity-0'} />
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
+                                    <Icon name="leaf" size={80} className="absolute -right-5 -bottom-5 opacity-20" />
+                                    <h5 className="font-black text-lg mb-2">SMK-PK</h5>
+                                    <p className="text-xs font-bold opacity-90 leading-relaxed">
+                                        Status Pusat Keunggulan menuntut kami untuk selalu selaras dengan standar industri global.
+                                    </p>
+                                </div>
+                            </aside>
+
+                            {/* Content Detail */}
+                            <article className="lg:col-span-9 space-y-12">
+                                
+                                {/* Section Visi */}
+                                <div className="bg-white rounded-[2.5rem] shadow-sm border border-slate-200 p-8 md:p-12 relative overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 rounded-bl-[100px]"></div>
+                                    <div className="flex items-center gap-4 mb-10">
+                                        <div className="w-12 h-1 bg-yellow-500 rounded-full"></div>
+                                        <span className="text-blue-900 font-black tracking-widest uppercase text-xs">Visi Sekolah</span>
+                                    </div>
+
+                                    <div className="text-center max-w-2xl mx-auto">
+                                        <h3 className="text-2xl font-bold text-slate-400 uppercase tracking-[0.2em] mb-4">Be ProuD</h3>
+                                        <div className="vision-card p-10 rounded-[2rem] shadow-2xl shadow-blue-900/20 border-b-8 border-yellow-500">
+                                            <p className="text-2xl md:text-3xl font-black text-white italic leading-tight">
+                                                "Berkarakter Profesional, Unggul dan Selaras dengan Dunia Kerja"
+                                            </p>
+                                        </div>
+                                        <p className="mt-8 text-slate-500 font-bold text-sm italic uppercase tracking-widest">
+                                            Target Capaian Menyeluruh Tahun 2026
+                                        </p>
+                                    </div>
+
+                                    <div className="mt-16 pt-10 border-t border-slate-100">
+                                        <h4 className="text-blue-900 font-black text-xs uppercase tracking-widest mb-6">Arah Kebijakan Provinsi Kaltara</h4>
+                                        <p className="text-slate-600 text-sm leading-relaxed italic border-l-4 border-blue-900 pl-6">
+                                            "Terwujudnya Fondasi Transformasi Kalimantan Utara yang kokoh sebagai beranda depan NKRI yang Maju, Makmur dan Berkelanjutan."
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Section Misi */}
+                                <div className="bg-white rounded-[2.5rem] shadow-sm border border-slate-200 p-8 md:p-12">
+                                    <div className="flex items-center gap-4 mb-10">
+                                        <div className="w-12 h-1 bg-blue-900 rounded-full"></div>
+                                        <span className="text-blue-900 font-black tracking-widest uppercase text-xs">Misi Sekolah</span>
+                                    </div>
+
+                                    <div className="grid gap-4">
+                                        {missions.map((m, i) => (
+                                            <div key={i} className="flex gap-6 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-yellow-500 transition-colors group">
+                                                <div className="w-10 h-10 bg-blue-900 text-yellow-400 rounded-lg flex items-center justify-center font-black shrink-0 group-hover:bg-yellow-500 group-hover:text-blue-900 transition-colors">
+                                                    {i + 1}
+                                                </div>
+                                                <p className="font-bold text-slate-700 leading-relaxed pt-2">{m}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Section Tujuan */}
+                                <div className="bg-slate-900 rounded-[2.5rem] shadow-2xl p-8 md:p-12 text-white relative overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-full h-full bg-blue-800/10 pointer-events-none"></div>
+                                    <div className="flex items-center gap-4 mb-10 relative z-10">
+                                        <div className="w-12 h-1 bg-yellow-500 rounded-full"></div>
+                                        <span className="text-yellow-400 font-black tracking-widest uppercase text-xs">Tujuan Strategis</span>
+                                    </div>
+
+                                    <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 relative z-10">
+                                        {objectives.map((obj, i) => (
+                                            <div key={i} className="flex gap-4 items-start border-b border-white/5 pb-4">
+                                                <Icon name="check-circle" size={18} className="text-green-400 shrink-0 mt-1" />
+                                                <p className="text-sm font-medium text-blue-100 leading-relaxed">{obj}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    
+                                    <div className="mt-12 p-6 bg-white/5 rounded-2xl border border-white/10 text-center relative z-10">
+                                        <p className="text-xs font-bold text-blue-200 uppercase tracking-[0.3em]">Komitmen SMK Negeri 1 Tanjung Selor 2021 - 2026</p>
+                                    </div>
+                                </div>
+
+                            </article>
+                        </div>
+                    </main>
+
+                    {/* --- FOOTER --- */}
+                    <footer className="bg-slate-950 text-slate-400 pt-16 pb-8 border-t-8 border-yellow-500 mt-20">
+                        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 mb-12">
+                            <div>
+                                <div className="flex items-center gap-3 text-white mb-6">
+                                    <div className="w-10 h-10 bg-yellow-500 text-blue-950 rounded-lg flex items-center justify-center font-black text-xl">S1</div>
+                                    <div className="font-black leading-none text-sm tracking-tighter">
+                                        <div>SMKN 1</div>
+                                        <div className="text-yellow-500 text-[8px] tracking-widest">TANJUNG SELOR</div>
+                                    </div>
+                                </div>
+                                <p className="text-sm italic">"Berkarakter Profesional, Unggul dan Selaras dengan Dunia Kerja."</p>
+                            </div>
+                            <div>
+                                <h4 className="text-white font-black mb-6 uppercase text-xs border-l-4 border-yellow-500 pl-4">Informasi</h4>
+                                <ul className="space-y-4 text-xs font-bold">
+                                    <li className="flex gap-2"><Icon name="map-pin" size={16} className="text-yellow-500 shrink-0"/> <span>SKIP 1 Tanjung Selor, Kaltara</span></li>
+                                    <li className="flex gap-2"><Icon name="phone" size={16} className="text-yellow-500 shrink-0"/> <span>(0552) 21xxx</span></li>
+                                </ul>
+                            </div>
+                            <div className="text-right flex flex-col items-end">
+                                <h4 className="text-white font-black mb-6 uppercase text-xs border-r-4 border-yellow-500 pr-4">Media Sosial</h4>
+                                <div className="flex gap-4">
+                                    {['instagram', 'youtube', 'facebook'].map(s => (
+                                        <div key={s} className="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center hover:bg-yellow-500 hover:text-blue-950 transition-all cursor-pointer">
+                                            <Icon name={s} size={16} />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="max-w-7xl mx-auto px-4 pt-8 border-t border-white/5 text-center text-[10px] font-black uppercase tracking-widest opacity-30">
+                            © 2026 SMK Negeri 1 Tanjung Selor.
+                        </div>
+                    </footer>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
