@@ -157,8 +157,71 @@
 
     <script>
         const teacherData = [
-            { name: "Fransiska Andayani, S.Pd.", subject: "Kepala Sekolah", role: "Pimpinan" },
-            { name: "Totok Nadi Hermanto, S.E.", subject: "Akuntansi", role: "Guru Madya" }
+            { name: "Fransiska Andayani, S.Pd.", subject: "Kepala Sekolah", role: "Guru Madya", photo: "teacher.webp" },
+            { name: "Totok Nadi Hermanto, S.E.", subject: "Akuntansi", role: "Guru Madya", photo: "totok.webp" },
+            { name: "Ahmad Winarno, S.Pd.", subject: "Bahasa Inggris", role: "Guru Madya", photo: "ahmad.webp" },
+            { name: "Agustinus Rantetampang, S.Pd.", subject: "Matematika", role: "Guru Muda", photo: "teacher.webp" },
+            { name: "Erik Setiya Prambudi, S.Pd.", subject: "PJOK", role: "Guru Muda", photo: "teacher.webp" },
+            { name: "Bertha Melka, S.Pd.", subject: "Bahasa Indonesia", role: "Guru Madya", photo: "bertha.webp" },
+            { name: "Ambo Saka, S.Pd.", subject: "Administrasi Perkantoran", role: "Guru Madya", photo: "ambo.webp" },
+            { name: "Guning Srinanik, S.Pd.", subject: "Bahasa Indonesia", role: "Guru Madya", photo: "guning.webp" },
+            { name: "M. Amin, S.Pd.", subject: "Akuntansi", role: "Guru Madya", photo: "teacher.webp" },
+            { name: "Sundari Uliyanti, S.Pd.", subject: "IPAS", role: "Guru Madya", photo: "sundari.webp" },
+            { name: "Endang Susilawati, S.Pd.", subject: "Administrasi Perkantoran", role: "Guru Madya", photo: "endang.webp" },
+            { name: "Lilik Sugiarti, S.Pd.", subject: "Pemasaran", role: "Guru Madya", photo: "lilik.webp" },
+            { name: "Eny Siti Suwarti, S.Pd.", subject: "PKN", role: "Guru Madya", photo: "eny.webp" },
+            { name: "Novel Elias, S.Th.", subject: "Pend. Agama Kristen", role: "Guru Madya", photo: "teacher.webp" },
+            { name: "Kamal Duwila, M.A.", subject: "Pend. Agama Islam", role: "Guru Madya", photo: "teacher.webp" },
+            { name: "Samsir Alam, S.Ag.", subject: "Pend. Agama Islam", role: "Guru Madya", photo: "teacher.webp" },
+            { name: "Marius Randan Kali, S.S., M.Pd.", subject: "Bahasa Inggris", role: "Guru Madya", photo: "teacher.webp" },
+            { name: "Sahati, S.Pd.", subject: "IPAS", role: "Guru Muda", photo: "teacher.webp" },
+            { name: "Kartini, S.Pd.", subject: "Administrasi Perkantoran", role: "Guru Muda", photo: "kartini.webp" },
+            { name: "Sudarmin, S.Ag., M.Pd.I.", subject: "Pend. Agama Islam", role: "Guru Muda", photo: "teacher.webp" },
+            { name: "Binyamin Laing, S.Pd.,Gr.", subject: "Bahasa Inggris", role: "Guru Muda", photo: "binyamin.webp" },
+            { name: "Seno, S.Pd.", subject: "Akuntansi", role: "Guru Muda", photo: "seno.webp" },
+            { name: "Syamsiah, S.Pd.", subject: "Akuntansi", role: "Guru Muda", photo: "syamsiah.webp" },
+            { name: "Lyly Pasaribu, S.Pd.", subject: "Busana", role: "Guru Muda", photo: "lyly.webp" },
+            { name: "Sri Asmarani, S.Pd.", subject: "Bimbingan Konseling", role: "Guru Muda", photo: "sri.webp" },
+            { name: "Erni Wijayanti, S.Pd.", subject: "TIK", role: "Guru Muda", photo: "erni.webp" },
+            { name: "Sri Mulyani, S.Pd.,Gr.", subject: "Bahasa Indonesia", role: "Guru Muda", photo: "sri.webp" },
+            { name: "Elya Ikin, S.Th", subject: "Pend. Agama Kristen", role: "Guru Muda", photo: "elya.webp" },
+            { name: "Rusmin Mauliddin, S.Pd.,Gr.", subject: "PKN", role: "Guru Muda", photo: "rusmin.webp" },
+            { name: "Nirwana Tambunan, S.Pd.", subject: "Pemasaran", role: "Guru Muda", photo: "nirwana.webp" },
+            { name: "Durrotul Machfiyyah, S.Pd.", subject: "Usaha Layanan Pariwisata", role: "Guru Muda", photo: "durrotul.webp" },
+            { name: "Relisma Sitanggang, S.Pd.", subject: "Pemasaran", role: "Guru Muda", photo: "relisma.webp" },
+            { name: "Nuraini, S.Pd.", subject: "Perhotelan", role: "Guru Muda", photo: "nuraini.webp" },
+            { name: "Zainab Huriyyatul Fikri, S.Pd.", subject: "Busana", role: "Guru Muda", photo: "zainab.webp" },
+            { name: "Susilawati, S.Pd.", subject: "Usaha Layanan Pariwisata", role: "Guru Muda", photo: "susilawati.webp" },
+            { name: "Lina Indriani Agustin, S.Pd.", subject: "Matematika", role: "Guru Pertama", photo: "lina.webp" },
+            { name: "Fachrial Saputra, S.Pd.", subject: "Bahasa Inggris", role: "Guru Pertama", photo: "fachrial.webp" },
+            { name: "Regina Belopa, S.Ag.", subject: "Pend. Agama Katolik", role: "PPPK", photo: "regina.webp" },
+            { name: "Haris, S.Kom.", subject: "TIK", role: "PPPK", photo: "haris.webp" },
+            { name: "Berliana Haloho, S.Pd.", subject: "Pendidikan Tata Boga", role: "PPPK", photo: "berliana.webp" },
+            { name: "Yonif Rimba Cahyani, S.Pd.", subject: "Pendidikan Tata Busana", role: "PPPK", photo: "yonif.webp" },
+            { name: "Ulya Setiyawan, S.Sn.,Gr.", subject: "Seni Budaya", role: "PPPK", photo: "ulya.webp" },
+            { name: "Anang Al Marzak, S.Pd.", subject: "Bimbingan Konseling", role: "PPPK", photo: "anang.webp" },
+            { name: "Arta Adi Nugraha, S.Pd.,Gr.", subject: "Bimbingan Konseling", role: "PPPK", photo: "arta.webp" },
+            { name: "Sri Wahyudiani, S.Pd.", subject: "Pendidikan Tata Boga", role: "PPPK", photo: "sri.webp" },
+            { name: "Dhani, S.E, Par.", subject: "Perhotelan", role: "PPPK", photo: "dhani.webp" },
+            { name: "Ester, S.Pd.", subject: "Pemasaran", role: "PPPK", photo: "ester.webp" },
+            { name: "Tiyadza Abdullah, S.Pd.", subject: "Pend. Agama Islam", role: "GTT", photo: "tiyadza.webp" },
+            { name: "Niken Saraswaty, S.Par.", subject: "Usaha Layanan Pariwisata", role: "GTT", photo: "niken.webp" },
+            { name: "Andi Mutmainna, S.E.", subject: "Tenaga Perpustakaan", role: "Pengadministrasi Umum", photo: "andi.webp" },
+            { name: "Matahari", subject: "Tenaga Administrasi", role: "Pengadministrasi Umum", photo: "matahari.webp" },
+            { name: "Salmiati Talib", subject: "Tenaga Administrasi", role: "Pengadministrasi Umum", photo: "salmiati.webp" },
+            { name: "Toni Suhartono", subject: "Tenaga Administrasi", role: "Pengadministrasi Umum", photo: "toni.webp" },
+            { name: "Lina Udini, A.Md.", subject: "Tenaga Administrasi", role: "PPPK", photo: "lina.webp" },
+            { name: "Syaed Syeh Alkap, S.Pd.", subject: "Tenaga Administrasi", role: "PPPK", photo: "syaed.webp" },
+            { name: "Linda Saalino, S.Pd.", subject: "Tenaga Administrasi", role: "PPPK", photo: "linda.webp" },
+            { name: "Devi Lestari Djarru, S.Pd.", subject: "Tenaga Administrasi", role: "PPPK", photo: "devi.webp" },
+            { name: "Mira Awalina", subject: "Tenaga Perpustakaan", role: "PPPK", photo: "mira.webp" },
+            { name: "Sulham", subject: "Tenaga Perpustakaan", role: "PPPK", photo: "sulham.webp" },
+            { name: "Juma'an Amani", subject: "Tenaga Kebersihan", role: "PPPK", photo: "jumaan.webp" },
+            { name: "Septianus", subject: "Tenaga Kebersihan", role: "PPPK", photo: "septianus.webp" },
+            { name: "Novi Harianto", subject: "Tenaga Kebersihan", role: "PPPK", photo: "novi.webp" },
+            { name: "Samsul Arifin", subject: "Satpam", role: "PPPK", photo: "samsul.webp" },
+            { name: "Sabaruddin", subject: "Satpam", role: "PPPK", photo: "sabaruddin.webp" },
+            { name: "Cholis Anwar", subject: "Satpam", role: "PTT", photo: "cholis.webp" },
         ];
 
         const teacherGrid = document.getElementById('teacherGrid');
@@ -193,31 +256,43 @@
         function teacherCard(teacher) {
             return `
             <div class="teacher-card bg-white rounded-[2.5rem] border border-slate-200 shadow-sm overflow-hidden flex flex-col items-center p-8 text-center group">
-                <div class="relative mb-8">
-                    <div class="absolute inset-0 bg-yellow-500 rounded-[2rem] rotate-6 group-hover:rotate-12 transition-transform duration-500 opacity-20"></div>
-                    <div class="relative w-36 h-36 bg-slate-100 rounded-[2rem] flex items-center justify-center text-slate-300 border-4 border-white shadow-md z-10 overflow-hidden group-hover:border-blue-900 transition-colors duration-500">
-                        <i data-lucide="user" class="w-20 h-20 group-hover:scale-110 transition-transform duration-500"></i>
-                    </div>
-                    <div class="absolute -bottom-2 -right-2 w-12 h-12 bg-blue-900 text-yellow-400 rounded-2xl flex items-center justify-center shadow-lg border-2 border-white z-20">
-                        <i data-lucide="star" class="w-6 h-6"></i>
-                    </div>
-                </div>
 
-                <h4 class="text-xl font-black text-blue-950 uppercase tracking-tighter leading-tight mb-3">
-                    ${teacher.name}
-                </h4>
+    <div class="relative mb-8">
+        <div class="absolute inset-0 bg-yellow-500 rounded-[2rem] rotate-6 group-hover:rotate-12 transition-transform duration-500 opacity-20"></div>
 
-                <div class="mt-auto w-full space-y-4">
-                    <div class="pt-4 border-t border-slate-100">
-                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">Mata Pelajaran</p>
-                        <p class="text-blue-700 font-bold text-base italic leading-snug">${teacher.subject}</p>
-                    </div>
+        <div class="relative w-36 h-36 bg-slate-100 rounded-[2rem] border-4 border-white shadow-md z-10 overflow-hidden group-hover:border-blue-900 transition-colors duration-500">
+            
+            <img 
+                src="../assets/img/gurustaff/${teacher.photo}" 
+                alt="${teacher.name}"
+                class="w-full h-full object-cover"
+            >
 
-                    <div class="inline-block px-4 py-1.5 bg-blue-50 text-blue-900 rounded-xl text-[10px] font-black uppercase tracking-widest border border-blue-100 group-hover:bg-blue-900 group-hover:text-white transition-colors">
-                        ${teacher.role}
-                    </div>
-                </div>
-            </div>
+        </div>
+
+        <div class="absolute -bottom-2 -right-2 w-12 h-12 bg-blue-900 text-yellow-400 rounded-2xl flex items-center justify-center shadow-lg border-2 border-white z-20">
+            <i data-lucide="star" class="w-6 h-6"></i>
+        </div>
+    </div>
+
+    <h4 class="text-xl font-black text-blue-950 uppercase tracking-tighter leading-tight mb-3">
+        ${teacher.name}
+    </h4>
+
+    <div class="mt-auto w-full space-y-4">
+        <div class="pt-4 border-t border-slate-100">
+            <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">Mata Pelajaran</p>
+            <p class="text-blue-700 font-bold text-base italic leading-snug">
+                ${teacher.subject}
+            </p>
+        </div>
+
+        <div class="inline-block px-4 py-1.5 bg-blue-50 text-blue-900 rounded-xl text-[10px] font-black uppercase tracking-widest border border-blue-100 group-hover:bg-blue-900 group-hover:text-white transition-colors">
+            ${teacher.role}
+        </div>
+    </div>
+
+</div>
         `;
         }
 
