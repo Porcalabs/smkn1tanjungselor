@@ -1,76 +1,3 @@
-<!--<div class="bg-slate-950 text-yellow-500 py-2 hidden md:block border-b border-yellow-500/20">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center text-[10px] font-bold uppercase tracking-widest">
-        <div class="flex gap-6">
-            <span class="flex items-center gap-1"><i data-lucide="phone" class="w-3 h-3"></i> (0552) 21xxx</span>
-            <span class="flex items-center gap-1"><i data-lucide="mail" class="w-3 h-3"></i> info@smkn1tanjungselor.sch.id</span>
-        </div>
-        <div class="flex gap-4">
-            <span class="text-white opacity-80">Akreditasi: A</span>
-            <span class="text-white opacity-80">NPSN: 30402596</span>
-        </div>
-    </div>
-</div>
-
-<nav class="fixed md:sticky top-0 w-full z-50 bg-white shadow-md border-b-4 border-yellow-500">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20 items-center">
-            <div class="flex items-center gap-3 shrink-0">
-                <div class="w-12 h-12 bg-gradient-to-tr from-blue-900 to-blue-700 rounded-full flex items-center justify-center text-yellow-400 border-2 border-yellow-500 shadow-inner">
-                    <i data-lucide="shield-check" class="w-7 h-7"></i>
-                </div>
-                <div class="hidden sm:block">
-                    <h1 class="text-lg font-black leading-tight text-blue-900 flex flex-col">
-                        <span>SMK NEGERI 1</span>
-                        <span class="text-yellow-600 -mt-1 text-[10px] tracking-[0.2em]">TANJUNG SELOR</span>
-                    </h1>
-                </div>
-            </div>
-
-            <div class="hidden md:flex items-center space-x-6 lg:space-x-8 font-bold text-blue-900 text-sm">
-                <a href="../index.html" class="nav-link">Beranda</a>
-                <a href="../profile/index.html" class="nav-link">Profil Sekolah</a>
-                <a href="../index.html#kurikulum" class="nav-link">Manajemen Kepala Sekolah</a>
-                <a href="../index.html#jurusan" class="nav-link">Program Keahlian</a>
-                <a href="../index.html#produk-tefa" class="nav-link">BLUD</a>
-                <a href="../index.html#kontak" class="nav-link">Kontak Kami</a>
-
-                <a
-                    href="../index.html#ppdb"
-                    class="px-5 py-2.5 bg-blue-900 text-yellow-400 rounded-xl hover:bg-blue-800 transition-all shadow-lg border-b-4 border-yellow-600 flex items-center gap-2 text-xs"
-                >
-                    <i data-lucide="graduation-cap" class="w-4 h-4"></i> PPDB Online
-                </a>
-            </div>
-
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="p-2 text-blue-900 bg-slate-100 rounded-lg">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-6 flex-col space-y-6 font-bold text-blue-900 shadow-2xl overflow-y-auto max-h-[80vh]">
-        <a href="../index.html">Beranda</a>
-
-        <div class="border-l-4 border-yellow-500 pl-4 py-1">
-            <p class="text-xs text-slate-400 mb-2 uppercase tracking-widest">Profil Sekolah</p>
-            <div class="flex flex-col space-y-3">
-                <a href="../profile/sejarah.html">Sejarah</a>
-                <a href="../profile/visi-misi.html">Visi Misi</a>
-                <a href="../profile/tujuan.html">Tujuan</a>
-                <a href="../profile/struktur-organisasi.html">Struktur Organisasi</a>
-                <a href="../profile/sambutan-kepala-sekolah.html">Sambutan Kepala Sekolah</a>
-                <a href="../profile/profil-kepala-sekolah.html">Profil Kepala Sekolah</a>
-                <a href="../profile/guru.html">Guru</a>
-                <a href="../profile/tenaga-pendidikan.html">Tenaga Pendidikan</a>
-            </div>
-        </div>
-
-        <a href="../index.html#kontak">Kontak Kami</a>
-    </div>
-</nav>-->
-
 <nav class="fixed md:sticky top-0 w-full z-50 bg-white shadow-md border-b-4 border-yellow-500">
     <div class="bg-slate-950 text-yellow-500 py-2 hidden md:block border-b border-yellow-500/20">
         <div
@@ -100,7 +27,7 @@
                 </div>
 
                 <div class="hidden sm:block">
-                    <h1 class="text-lg font-black leading-tight text-blue-900 flex flex-col">
+                    <h1 class="text-lg font-black leading-tight text-red-900 flex flex-col">
                         <span>SMK NEGERI 1</span>
                         <span class="text-yellow-600 -mt-1 text-[10px] tracking-[0.2em]">TANJUNG SELOR</span>
                     </h1>
@@ -108,7 +35,7 @@
             </div>
 
             <!-- Desktop Menu Items -->
-            <div class="hidden md:flex items-center space-x-6 lg:space-x-8 font-bold text-blue-900 text-sm">
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8 font-bold text-red-900 text-sm">
                 <a href="../index.html" class="nav-link">Beranda</a>
 
                 <!-- Dropdown Profil Sekolah -->
@@ -183,6 +110,25 @@
                     </div>
                 </div>
 
+                <!-- Dropdown LSP -->
+                <div class="relative dropdown group py-8">
+                    <button class="nav-link flex items-center gap-1">
+                        LSP
+                        <i data-lucide="chevron-down" class="w-4 h-4 group-hover:rotate-180 transition-transform"></i>
+                    </button>
+                    <div
+                        class="absolute top-20 left-0 bg-white shadow-xl rounded-xl border border-slate-100 py-4 w-56 hidden group-hover:block animate-in fade-in slide-in-from-top-2 duration-200">
+                        <a href="../produk/produk-tefa.html"
+                            class="block px-6 py-2 hover:bg-yellow-50 hover:text-yellow-600">SK Lisensi</a>
+                        <a href="../produk/toko.html"
+                            class="block px-6 py-2 hover:bg-yellow-50 hover:text-yellow-600">Struktur Pengurus LSP</a>
+                        <a href="../produk/toko.html"
+                            class="block px-6 py-2 hover:bg-yellow-50 hover:text-yellow-600">Asesor Kompetensi</a>
+                        <a href="../produk/toko.html"
+                            class="block px-6 py-2 hover:bg-yellow-50 hover:text-yellow-600">Skema Sertifikasi</a>
+                    </div>
+                </div>
+
                 <!-- Dropdown BLUD -->
                 <div class="relative dropdown group py-8">
                     <button class="nav-link flex items-center gap-1">
@@ -198,19 +144,19 @@
                     </div>
                 </div>
 
-                <a href="/kontak.html" class="nav-link">Kontak Kami</a>
 
-                <!-- PPDB Button -->
-                <a href="ppdb.html"
-                    class="px-5 py-2.5 bg-blue-900 text-yellow-400 rounded-xl hover:bg-blue-800 transition-all shadow-lg border-b-4 border-yellow-600 flex items-center gap-2 text-xs">
-                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
-                    PPDB Online
+
+                <!-- Kontak Button -->
+                <a href="/kontak.html" class=" px-5 py-2.5 bg-red-900 text-yellow-400 rounded-xl hover:bg-red-800 transition-all shadow-lg
+                    border-b-4 border-yellow-600 flex items-center gap-2 text-xs">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    Kontak Kami
                 </a>
             </div>
 
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="p-2 text-blue-900 bg-slate-100 rounded-lg">
+                <button id="mobile-menu-button" class="p-2 text-red-900 bg-slate-100 rounded-lg">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
@@ -219,7 +165,7 @@
 
     <!-- Mobile Menu Panel -->
     <div id="mobile-menu"
-        class="hidden md:hidden bg-white border-t p-6 flex-col space-y-6 animate-in slide-in-from-top font-bold text-blue-900 shadow-2xl overflow-y-auto max-h-[80vh]">
+        class="hidden md:hidden bg-white border-t p-6 flex-col space-y-6 animate-in slide-in-from-top font-bold text-red-900 shadow-2xl overflow-y-auto max-h-[80vh]">
 
         <!-- Beranda -->
         <a href="index.html">Beranda</a>
@@ -278,7 +224,7 @@
 
         <!-- Social Media Links -->
         <a href="/kontak.html"
-            class="bg-blue-900 text-yellow-400 p-4 rounded-xl text-center flex items-center justify-center gap-2">
+            class="bg-red-900 text-yellow-400 p-4 rounded-xl text-center flex items-center justify-center gap-2">
             <i data-lucide="graduation-cap" class="w-5 h-5"></i>
             PPDB ONLINE 2026
         </a>
