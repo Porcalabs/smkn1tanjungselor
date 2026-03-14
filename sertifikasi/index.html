@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LSP P1 - SMK Negeri 1 Tanjung Selor</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #eab308;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .lsp-menu-btn.active {
+            background-color: rgb(254 249 195);
+            color: rgb(161 98 7);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-slate-50 flex flex-col pt-20">
+    <div class="min-h-screen flex flex-col">
+        <!-- HEADER -->
+        <div id="header-include"></div>
+
+        <!-- BREADCRUMB HERO -->
+        <section class="bg-red-900 py-16 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <i data-lucide="award" class="absolute -right-20 -bottom-20 text-yellow-400 opacity-20"
+                    style="width:400px;height:400px"></i>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 relative z-10">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 bg-yellow-500/20 rounded-full text-yellow-400 text-[10px] font-black uppercase mb-4 border border-yellow-500/30 tracking-widest">
+                    <i data-lucide="check-circle" style="width:12px;height:12px"></i>
+                    Terlisensi BNSP (No. KEP. 185/BNSP/1/2026)
+                </div>
+                <h2 class="text-4xl font-black text-white mb-4 uppercase italic">LSP P1 SMKN 1 Tanjung Selor</h2>
+                <nav class="flex text-red-200 text-sm font-bold uppercase tracking-widest items-center gap-2">
+                    <a href="index.html" class="hover:text-yellow-400">Beranda</a>
+                    <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+                    <span class="text-white uppercase tracking-tighter">Lembaga Sertifikasi Profesi</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT -->
+        <main class="flex-grow max-w-7xl mx-auto px-4 py-16 w-full">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Sidebar -->
+                <aside class="lg:col-span-3 space-y-8">
+                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden sticky top-24">
+                        <div class="bg-red-900 p-6 text-white text-center">
+                            <h4 class="font-black uppercase tracking-widest text-xs">Menu LSP</h4>
+                        </div>
+                        <div class="p-2">
+                            <button data-target="tentang"
+                                class="lsp-menu-btn active w-full flex items-center gap-4 px-4 py-4 rounded-xl font-bold transition-all text-sm text-slate-600 hover:bg-slate-50">
+                                <i data-lucide="info" style="width:18px;height:18px"></i>
+                                Tentang LSP
+                            </button>
+                            <button data-target="struktur"
+                                class="lsp-menu-btn w-full flex items-center gap-4 px-4 py-4 rounded-xl font-bold transition-all text-sm text-slate-600 hover:bg-slate-50">
+                                <i data-lucide="building-2" style="width:18px;height:18px"></i>
+                                Struktur Organisasi
+                            </button>
+                            <button data-target="asesor"
+                                class="lsp-menu-btn w-full flex items-center gap-4 px-4 py-4 rounded-xl font-bold transition-all text-sm text-slate-600 hover:bg-slate-50">
+                                <i data-lucide="users" style="width:18px;height:18px"></i>
+                                Daftar Asesor
+                            </button>
+                            <button data-target="skema"
+                                class="lsp-menu-btn w-full flex items-center gap-4 px-4 py-4 rounded-xl font-bold transition-all text-sm text-slate-600 hover:bg-slate-50">
+                                <i data-lucide="file-check" style="width:18px;height:18px"></i>
+                                Skema Sertifikasi
+                            </button>
+                            <a
+                                href="https://drive.google.com/file/d/1Gth72FXmhRW0bQm6X4A8j_yqLYHYrzDU/view?usp=sharing">
+                                <button
+                                    class="lsp-menu-btn w-full flex items-center gap-4 px-4 py-4 rounded-xl font-bold transition-all text-sm text-slate-600 hover:bg-slate-50">
+                                    <i data-lucide="download" style="width:18px;height:18px"></i>
+                                    SK Lisensi
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Content -->
+                <article class="lg:col-span-9 space-y-12">
+                    <!-- Tentang -->
+                    <section id="tentang"
+                        class="lsp-section bg-white rounded-[2.5rem] shadow-sm border border-slate-200 p-8 md:p-12">
+                        <div class="flex items-center gap-4 mb-8 text-red-900">
+                            <div class="w-12 h-1 bg-yellow-500 rounded-full"></div>
+                            <span class="font-black tracking-widest uppercase text-xs">Visi & Misi LSP</span>
+                        </div>
+                        <h3 class="text-3xl font-black text-red-950 mb-6 uppercase italic tracking-tighter">
+                            Menjadi Lembaga Sertifikasi Profesional Terpercaya
+                        </h3>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                            Lembaga Sertifikasi Profesi (LSP) P1 SMK Negeri 1 Tanjung Selor adalah lembaga pendukung
+                            BNSP yang bertanggung jawab melaksanakan sertifikasi kompetensi profesi bagi siswa. Melalui
+                            perpanjangan lisensi tahun 2026, kami berkomitmen untuk memastikan lulusan kami memiliki
+                            pengakuan kompetensi tingkat nasional yang selaras dengan kebutuhan dunia kerja.
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="p-8 bg-red-50 rounded-[2rem] border border-red-100">
+                                <h4 class="font-black text-red-900 uppercase tracking-widest text-sm mb-4">Misi LSP
+                                </h4>
+                                <ul class="space-y-4 text-sm text-slate-700 font-medium italic leading-relaxed">
+                                    <li>• Melaksanakan uji kompetensi secara jujur, adil, dan transparan.</li>
+                                    <li>• Meningkatkan kompetensi asesor secara berkelanjutan.</li>
+                                    <li>• Menjamin mutu pelaksanaan sertifikasi sesuai pedoman BNSP.</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="p-8 bg-yellow-50 rounded-[2rem] border border-yellow-100 flex flex-col justify-center text-center">
+                                <i data-lucide="check-circle" class="mx-auto text-yellow-600 mb-4"
+                                    style="width:48px;height:48px"></i>
+                                <p class="font-black text-red-950 text-xl italic uppercase tracking-tighter">100%
+                                    Lulusan</p>
+                                <p class="text-xs font-bold text-yellow-600 mt-1 uppercase tracking-widest">Memperoleh
+                                    Sertifikat BNSP</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Struktur -->
+                    <section id="struktur"
+                        class="lsp-section hidden bg-white rounded-[2.5rem] shadow-sm border border-slate-200 p-8 md:p-12">
+                        <div class="flex items-center gap-4 mb-8 text-red-900">
+                            <div class="w-12 h-1 bg-yellow-500 rounded-full"></div>
+                            <span class="font-black tracking-widest uppercase text-xs">Personil LSP</span>
+                        </div>
+                        <h3 class="text-3xl font-black text-red-950 mb-10 uppercase italic tracking-tighter">Pengurus
+                            LSP P1 SMKN 1 TJS</h3>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div
+                                class="p-6 bg-slate-50 border border-slate-100 rounded-2xl flex items-center gap-6 group hover:bg-red-900 hover:text-white transition-all">
+                                <div
+                                    class="w-12 h-12 bg-red-900 text-yellow-400 rounded-xl flex items-center justify-center font-black group-hover:bg-yellow-500 group-hover:text-red-900">
+                                    <i data-lucide="user-check" style="width:24px;height:24px"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black uppercase tracking-widest opacity-60">Ketua Dewan
+                                        Pengarah</p>
+                                    <p class="font-black text-sm uppercase italic tracking-tighter">Kepala SMKN 1
+                                        Tanjung Selor</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="p-6 bg-slate-50 border border-slate-100 rounded-2xl flex items-center gap-6 group hover:bg-red-900 hover:text-white transition-all">
+                                <div
+                                    class="w-12 h-12 bg-red-900 text-yellow-400 rounded-xl flex items-center justify-center font-black group-hover:bg-yellow-500 group-hover:text-red-900">
+                                    <i data-lucide="user-check" style="width:24px;height:24px"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black uppercase tracking-widest opacity-60">Ketua LSP</p>
+                                    <p class="font-black text-sm uppercase italic tracking-tighter">Agustinus
+                                        Rantetampang, S.Pd.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="p-6 bg-slate-50 border border-slate-100 rounded-2xl flex items-center gap-6 group hover:bg-red-900 hover:text-white transition-all">
+                                <div
+                                    class="w-12 h-12 bg-red-900 text-yellow-400 rounded-xl flex items-center justify-center font-black group-hover:bg-yellow-500 group-hover:text-red-900">
+                                    <i data-lucide="user-check" style="width:24px;height:24px"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black uppercase tracking-widest opacity-60">Ketua Komite
+                                        Skema</p>
+                                    <p class="font-black text-sm uppercase italic tracking-tighter">Totok Nadi Hermanto,
+                                        S.E.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="p-6 bg-slate-50 border border-slate-100 rounded-2xl flex items-center gap-6 group hover:bg-red-900 hover:text-white transition-all">
+                                <div
+                                    class="w-12 h-12 bg-red-900 text-yellow-400 rounded-xl flex items-center justify-center font-black group-hover:bg-yellow-500 group-hover:text-red-900">
+                                    <i data-lucide="user-check" style="width:24px;height:24px"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black uppercase tracking-widest opacity-60">Manajer
+                                        Sertifikasi</p>
+                                    <p class="font-black text-sm uppercase italic tracking-tighter">Syamsiah, S.Pd.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="p-6 bg-slate-50 border border-slate-100 rounded-2xl flex items-center gap-6 group hover:bg-red-900 hover:text-white transition-all">
+                                <div
+                                    class="w-12 h-12 bg-red-900 text-yellow-400 rounded-xl flex items-center justify-center font-black group-hover:bg-yellow-500 group-hover:text-red-900">
+                                    <i data-lucide="user-check" style="width:24px;height:24px"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black uppercase tracking-widest opacity-60">Manajer
+                                        Manajemen Mutu</p>
+                                    <p class="font-black text-sm uppercase italic tracking-tighter">Sahati, S.Pd.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="p-6 bg-slate-50 border border-slate-100 rounded-2xl flex items-center gap-6 group hover:bg-red-900 hover:text-white transition-all">
+                                <div
+                                    class="w-12 h-12 bg-red-900 text-yellow-400 rounded-xl flex items-center justify-center font-black group-hover:bg-yellow-500 group-hover:text-red-900">
+                                    <i data-lucide="user-check" style="width:24px;height:24px"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black uppercase tracking-widest opacity-60">Kepala Bidang
+                                        TUK</p>
+                                    <p class="font-black text-sm uppercase italic tracking-tighter">Ahmad Winarno, S.Pd.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Asesor -->
+                    <section id="asesor"
+                        class="lsp-section hidden bg-white rounded-[2.5rem] shadow-sm border border-slate-200 p-8 md:p-12">
+                        <div class="flex items-center gap-4 mb-8 text-red-900">
+                            <div class="w-12 h-1 bg-yellow-500 rounded-full"></div>
+                            <span class="font-black tracking-widest uppercase text-xs">Tenaga Ahli</span>
+                        </div>
+                        <h3 class="text-3xl font-black text-red-950 mb-8 uppercase italic tracking-tighter">Daftar
+                            Asesor Kompetensi</h3>
+
+                        <div class="overflow-hidden border border-slate-100 rounded-3xl">
+                            <table class="w-full text-left">
+                                <thead class="bg-red-900 text-white">
+                                    <tr>
+                                        <th class="px-6 py-4 text-[10px] font-black uppercase tracking-widest">Nama
+                                            Asesor</th>
+                                        <th class="px-6 py-4 text-[10px] font-black uppercase tracking-widest">Bidang
+                                            Keahlian</th>
+                                        <th class="px-6 py-4 text-[10px] font-black uppercase tracking-widest">No. Reg
+                                            MET</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    <tr class="hover:bg-slate-50 transition-colors">
+                                        <td class="px-6 py-4 font-black text-red-950 text-sm italic">Totok Nadi
+                                            Hermanto, S.E., MM</td>
+                                        <td class="px-6 py-4 font-bold text-slate-500 text-xs uppercase">Akuntansi</td>
+                                        <td class="px-6 py-4 font-mono text-xs text-red-900">MET.000.002616 2016</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 transition-colors">
+                                        <td class="px-6 py-4 font-black text-red-950 text-sm italic">Syamsiah, S.Pd.
+                                        </td>
+                                        <td class="px-6 py-4 font-bold text-slate-500 text-xs uppercase">Akuntansi</td>
+                                        <td class="px-6 py-4 font-mono text-xs text-red-900">MET.000.000943 2018</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 transition-colors">
+                                        <td class="px-6 py-4 font-black text-red-950 text-sm italic">Lyly Pasaribu,
+                                            S.Pd.</td>
+                                        <td class="px-6 py-4 font-bold text-slate-500 text-xs uppercase">Busana</td>
+                                        <td class="px-6 py-4 font-mono text-xs text-red-900">MET.000.001935 2022</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 transition-colors">
+                                        <td class="px-6 py-4 font-black text-red-950 text-sm italic">Dhani, S.E.Par.
+                                        </td>
+                                        <td class="px-6 py-4 font-bold text-slate-500 text-xs uppercase">Perhotelan</td>
+                                        <td class="px-6 py-4 font-mono text-xs text-red-900">MET.000.006195 2018</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 transition-colors">
+                                        <td class="px-6 py-4 font-black text-red-950 text-sm italic">Nuraini</td>
+                                        <td class="px-6 py-4 font-bold text-slate-500 text-xs uppercase">Usaha Layanan
+                                            Pariwisata</td>
+                                        <td class="px-6 py-4 font-mono text-xs text-red-900">MET.000.010688 2024</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="mt-8 text-xs text-slate-400 italic text-center">
+                            * Data berdasarkan SK Pengangkatan Asesor 2026
+                        </p>
+                    </section>
+
+                    <!-- Skema -->
+                    <section id="skema"
+                        class="lsp-section hidden bg-white rounded-[2.5rem] shadow-sm border border-slate-200 p-8 md:p-12">
+                        <div class="flex items-center gap-4 mb-8 text-red-900">
+                            <div class="w-12 h-1 bg-yellow-500 rounded-full"></div>
+                            <span class="font-black tracking-widest uppercase text-xs">Ruang Lingkup</span>
+                        </div>
+                        <h3 class="text-3xl font-black text-red-950 mb-6 uppercase italic tracking-tighter">
+                            Skema Sertifikasi Berlisensi
+                        </h3>
+                        <p class="text-slate-600 mb-10 leading-relaxed italic">
+                            Skema ini mencakup unit-unit kompetensi inti yang diselaraskan dengan Standar Kompetensi
+                            Kerja Nasional Indonesia (SKKNI).
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div
+                                class="p-6 border border-slate-100 rounded-2xl flex justify-between items-center hover:border-yellow-500 transition-all">
+                                <div>
+                                    <h5 class="font-black text-red-900 text-sm uppercase tracking-tighter">KKNI Level
+                                        II Akuntansi</h5>
+                                    <p class="text-[10px] font-bold text-slate-400 mt-1">21 Unit Kompetensi</p>
+                                </div>
+                                <i data-lucide="arrow-right" class="text-yellow-600" style="width:16px;height:16px"></i>
+                            </div>
+
+                            <div
+                                class="p-6 border border-slate-100 rounded-2xl flex justify-between items-center hover:border-yellow-500 transition-all">
+                                <div>
+                                    <h5 class="font-black text-red-900 text-sm uppercase tracking-tighter">KKNI Level
+                                        II Busana</h5>
+                                    <p class="text-[10px] font-bold text-slate-400 mt-1">17 Unit Kompetensi</p>
+                                </div>
+                                <i data-lucide="arrow-right" class="text-yellow-600" style="width:16px;height:16px"></i>
+                            </div>
+
+                            <div
+                                class="p-6 border border-slate-100 rounded-2xl flex justify-between items-center hover:border-yellow-500 transition-all">
+                                <div>
+                                    <h5 class="font-black text-red-900 text-sm uppercase tracking-tighter">KKNI Level
+                                        II Perhotelan</h5>
+                                    <p class="text-[10px] font-bold text-slate-400 mt-1">18 Unit Kompetensi</p>
+                                </div>
+                                <i data-lucide="arrow-right" class="text-yellow-600" style="width:16px;height:16px"></i>
+                            </div>
+
+                            <div
+                                class="p-6 border border-slate-100 rounded-2xl flex justify-between items-center hover:border-yellow-500 transition-all">
+                                <div>
+                                    <h5 class="font-black text-red-900 text-sm uppercase tracking-tighter">KKNI Level
+                                        II Kuliner</h5>
+                                    <p class="text-[10px] font-bold text-slate-400 mt-1">20 Unit Kompetensi</p>
+                                </div>
+                                <i data-lucide="arrow-right" class="text-yellow-600" style="width:16px;height:16px"></i>
+                            </div>
+
+                            <div
+                                class="p-6 border border-slate-100 rounded-2xl flex justify-between items-center hover:border-yellow-500 transition-all">
+                                <div>
+                                    <h5 class="font-black text-red-900 text-sm uppercase tracking-tighter">KKNI Level
+                                        II ULP</h5>
+                                    <p class="text-[10px] font-bold text-slate-400 mt-1">15 Unit Kompetensi</p>
+                                </div>
+                                <i data-lucide="arrow-right" class="text-yellow-600" style="width:16px;height:16px"></i>
+                            </div>
+
+                            <div
+                                class="p-6 border border-slate-100 rounded-2xl flex justify-between items-center hover:border-yellow-500 transition-all">
+                                <div>
+                                    <h5 class="font-black text-red-900 text-sm uppercase tracking-tighter">KKNI Level
+                                        II Pemasaran</h5>
+                                    <p class="text-[10px] font-bold text-slate-400 mt-1">19 Unit Kompetensi</p>
+                                </div>
+                                <i data-lucide="arrow-right" class="text-yellow-600" style="width:16px;height:16px"></i>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CTA -->
+                    <div
+                        class="p-12 bg-red-950 rounded-[3rem] text-center relative overflow-hidden shadow-2xl border-t-8 border-yellow-500">
+                        <i data-lucide="file-badge" class="absolute -right-10 -bottom-10 text-white/5 rotate-12"
+                            style="width:200px;height:200px"></i>
+                        <div class="relative z-10">
+                            <h4 class="text-2xl font-black text-white mb-4 uppercase italic tracking-tighter">
+                                Sertifikasi Adalah Kunci</h4>
+                            <p class="text-red-100 text-sm font-medium mb-10 max-w-2xl mx-auto leading-relaxed">
+                                Meningkatkan rasa percaya diri lulusan dalam memasuki dunia industri dengan pengakuan
+                                kompetensi yang sah secara nasional.
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-4">
+                                <button
+                                    class="px-8 py-3 bg-yellow-500 text-red-950 font-black rounded-xl text-[10px] uppercase tracking-[0.2em] shadow-xl shadow-yellow-500/20 hover:scale-105 transition-all">
+                                    Cek Jadwal Ujian
+                                </button>
+                                <button
+                                    class="px-8 py-3 bg-white text-red-900 font-black rounded-xl text-[10px] uppercase tracking-[0.2em] hover:bg-slate-50 transition-all">
+                                    Unduh Panduan
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <div id="footer-include"></div>
+    </div>
+
+    <script>
+        async function loadComponent(id, file) {
+            const res = await fetch(file);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+
+        loadComponent("header-include", "../components/header.html");
+        loadComponent("footer-include", "../components/footer.html");
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuButton = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const menuIcon = document.getElementById("menu-icon");
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener("click", function () {
+                    mobileMenu.classList.toggle("hidden");
+                    if (menuIcon) {
+                        menuIcon.setAttribute(
+                            "data-lucide",
+                            mobileMenu.classList.contains("hidden") ? "menu" : "x"
+                        );
+                        lucide.createIcons();
+                    }
+                });
+            }
+
+            document.querySelectorAll(".lsp-menu-btn").forEach(function (button) {
+                button.addEventListener("click", function () {
+                    const target = this.getAttribute("data-target");
+
+                    document.querySelectorAll(".lsp-menu-btn").forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+                    this.classList.add("active");
+
+                    document.querySelectorAll(".lsp-section").forEach(function (section) {
+                        section.classList.add("hidden");
+                    });
+
+                    const activeSection = document.getElementById(target);
+                    if (activeSection) {
+                        activeSection.classList.remove("hidden");
+                    }
+                });
+            });
+
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>
