@@ -539,6 +539,37 @@
     </div>
 
     <script>
+
+        document.addEventListener("DOMContentLoaded", async function () {
+            const base = document.body.getAttribute("data-base") || "";
+
+            async function loadInto(id, file) {
+                const el = document.getElementById(id);
+                if (!el) return;
+
+                const res = await fetch(base + file);
+                const html = await res.text();
+                el.innerHTML = html;
+            }
+
+            await loadInto("header-include", "components/header.html");
+            await loadInto("footer-include", "components/footer.html");
+
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+
+            const mobileMenuButton = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener("click", function () {
+                    mobileMenu.classList.toggle("hidden");
+                    mobileMenu.classList.toggle("flex");
+                });
+            }
+        });
+        
         document.addEventListener("DOMContentLoaded", async function () {
             async function loadBlogPosts() {
                 const url = "https://smkn1tanjungselor.sch.id/contents/?rest_route=/wp/v2/posts&per_page=6&_embed";
