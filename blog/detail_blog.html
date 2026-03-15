@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Berita - SMK Negeri 1 Tanjung Selor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #eab308;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #334155;
+            font-size: 1.125rem;
+        }
+
+        .article-content h2 {
+            font-weight: 800;
+            color: #1e3a8a;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: -0.025em;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-slate-50 flex flex-col pt-20">
+    <div class="min-h-screen flex flex-col">
+        <!-- HEADER -->
+        <div id="header-include"></div>
+
+        <main class="flex-grow max-w-5xl mx-auto px-4 py-12 md:py-20 w-full">
+            <nav class="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-8">
+                <a href="../index.html" class="hover:text-red-900">Beranda</a>
+                <i data-lucide="chevron-right" style="width: 12px; height: 12px;"></i>
+                <a href="berita.html" class="hover:text-red-900">Berita</a>
+                <i data-lucide="chevron-right" style="width: 12px; height: 12px;"></i>
+                <span id="breadcrumbCategory" class="text-red-900">Informasi Sekolah</span>
+            </nav>
+
+            <header class="mb-12">
+                <span id="postCategoryBadge"
+                    class="px-4 py-1.5 bg-red-900 text-yellow-400 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg inline-block mb-6">
+                    Informasi Sekolah
+                </span>
+
+                <h1 id="postTitle"
+                    class="text-4xl md:text-5xl font-black text-red-950 leading-tight italic tracking-tighter mb-8">
+                    Judul Artikel
+                </h1>
+
+                <div class="flex flex-wrap items-center gap-6 py-6 border-y border-slate-200">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-500">
+                            <i data-lucide="user" style="width: 20px; height: 20px;"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-black uppercase text-slate-400 leading-none mb-1">Penulis</p>
+                            <p id="postAuthor" class="text-sm font-bold text-red-900 uppercase">HUMAS SMKN 1 TJS</p>
+                        </div>
+                    </div>
+
+                    <div class="h-8 w-px bg-slate-200 hidden sm:block"></div>
+
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="calendar" class="text-yellow-600" style="width: 20px; height: 20px;"></i>
+                        <div>
+                            <p class="text-[10px] font-black uppercase text-slate-400 leading-none mb-1">Diterbitkan</p>
+                            <p id="postDate" class="text-sm font-bold text-slate-700">10 Maret 2026</p>
+                        </div>
+                    </div>
+
+                    <div class="ml-auto flex gap-2">
+                        <button
+                            class="w-10 h-10 rounded-xl bg-red-50 text-red-900 flex items-center justify-center hover:bg-red-900 hover:text-white transition-all shadow-sm"
+                            aria-label="Bagikan">
+                            <i data-lucide="share-2" style="width: 18px; height: 18px;"></i>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-xl bg-red-50 text-red-900 flex items-center justify-center hover:bg-red-900 hover:text-white transition-all shadow-sm"
+                            aria-label="Cetak">
+                            <i data-lucide="printer" style="width: 18px; height: 18px;"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div id="postHero"
+                class="relative aspect-video rounded-[3rem] overflow-hidden mb-12 shadow-2xl border-8 border-white bg-slate-100">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-slate-300">
+                    <i data-lucide="image" style="width: 100px; height: 100px; stroke-width: 1;"></i>
+                    <span class="text-xs font-black uppercase tracking-[0.3em] mt-4 opacity-50">Berita Utama S1</span>
+                </div>
+            </div>
+
+            <div id="postContent" class="article-content max-w-3xl mx-auto">
+                <p>Memuat artikel...</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto mt-16 pt-8 border-t border-slate-200 flex flex-wrap gap-2">
+                <span
+                    class="text-[10px] font-black uppercase text-slate-400 mr-4 self-center tracking-widest">Tagar:</span>
+                <div id="tagList" class="flex flex-wrap gap-2"></div>
+            </div>
+
+            <section class="mt-24">
+                <div class="flex items-center justify-between mb-12">
+                    <h3 class="text-2xl font-black text-red-950 uppercase italic tracking-tighter">Berita Terkait</h3>
+                    <a href="../blog/index.html"
+                        class="text-[10px] font-black uppercase text-red-900 tracking-widest hover:text-yellow-600 transition-colors flex items-center gap-2">
+                        <span>Lihat Semua</span>
+                        <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+                    </a>
+                </div>
+                <div id="relatedNews" class="grid md:grid-cols-2 gap-8"></div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <div id="footer-include"></div>
+    </div>
+
+    <script>
+        async function loadComponent(id, file) {
+            const res = await fetch(file);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+
+        function stripHtml(html) {
+            const div = document.createElement("div");
+            div.innerHTML = html || "";
+            return (div.textContent || div.innerText || "").trim();
+        }
+
+        function formatDate(dateString) {
+            return new Date(dateString).toLocaleDateString("id-ID", {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            });
+        }
+
+        function refreshIcons() {
+            if (window.lucide && typeof window.lucide.createIcons === "function") {
+                window.lucide.createIcons();
+            }
+        }
+
+        async function getCategoryName(categoryId) {
+
+            const url = `https://smkn1tanjungselor.sch.id/contents/?rest_route=/wp/v2/categories/${categoryId}`;
+
+            const res = await fetch(url);
+            const data = await res.json();
+
+            return data.name;
+        }
+
+        async function getTagName(tagId) {
+
+            const url = `https://smkn1tanjungselor.sch.id/contents/?rest_route=/wp/v2/tags/${tagId}`;
+
+            const res = await fetch(url);
+            const data = await res.json();
+
+            return data.name;
+        }
+
+
+        async function loadRelatedPosts(currentPostId, categoryId) {
+            const container = document.getElementById("relatedNews");
+            if (!container || !categoryId) return;
+
+            const url = `https://smkn1tanjungselor.sch.id/contents/?rest_route=/wp/v2/posts&categories=${categoryId}&per_page=3&_embed`;
+
+            function stripHtml(html) {
+                const div = document.createElement("div");
+                div.innerHTML = html || "";
+                return (div.textContent || div.innerText || "").trim();
+            }
+
+            function formatShortDate(dateString) {
+                return new Date(dateString).toLocaleDateString("id-ID", {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric"
+                });
+            }
+
+            try {
+                const res = await fetch(url);
+                if (!res.ok) {
+                    throw new Error("HTTP " + res.status);
+                }
+
+                const posts = await res.json();
+
+                const filteredPosts = posts
+                    .filter(function (post) {
+                        return String(post.id) !== String(currentPostId);
+                    })
+                    .slice(0, 2);
+
+                if (!filteredPosts.length) {
+                    container.innerHTML = `
+                <div class="md:col-span-2 text-center py-10 bg-white rounded-[2.5rem] border border-slate-200 shadow-sm">
+                    <p class="font-bold text-slate-500">Belum ada berita terkait.</p>
+                </div>
+            `;
+                    return;
+                }
+
+                container.innerHTML = filteredPosts.map(function (news) {
+                    const title = stripHtml(news.title?.rendered || "Tanpa Judul");
+                    const date = formatShortDate(news.date);
+                    const categoryName =
+                        news._embedded?.["wp:term"]?.[0]?.[0]?.name || "Berita";
+
+                    return '' +
+                        `<a href="detail_blog.html?id=${news.id}" class="group bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm hover:border-red-900 transition-all flex flex-col md:flex-row gap-6">` +
+                        `<div class="w-20 h-20 bg-red-50 rounded-2xl flex items-center justify-center text-red-900 shrink-0 group-hover:bg-yellow-500 transition-colors">` +
+                        `<i data-lucide="newspaper" style="width: 32px; height: 32px;"></i>` +
+                        `</div>` +
+                        `<div>` +
+                        `<div class="flex items-center gap-3 mb-2">` +
+                        `<span class="text-[9px] font-black uppercase text-yellow-600 tracking-widest">${categoryName}</span>` +
+                        `<span class="w-1 h-1 bg-slate-300 rounded-full"></span>` +
+                        `<span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">${date}</span>` +
+                        `</div>` +
+                        `<h4 class="font-black text-red-950 uppercase tracking-tighter group-hover:text-red-700 transition-colors leading-snug">${title}</h4>` +
+                        `</div>` +
+                        `</a>`;
+                }).join("");
+
+                refreshIcons();
+            } catch (error) {
+                console.error("Gagal load related posts:", error);
+                container.innerHTML = `
+            <div class="md:col-span-2 text-center py-10 bg-white rounded-[2.5rem] border border-slate-200 shadow-sm">
+                <p class="font-bold text-red-700">Berita terkait gagal dimuat.</p>
+            </div>
+        `;
+            }
+        }
+
+
+
+        async function loadPostDetail() {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get("id");
+
+            if (!id) {
+                document.getElementById("postContent").innerHTML = "<p>ID artikel tidak ditemukan.</p>";
+                return;
+            }
+
+            const url = `https://smkn1tanjungselor.sch.id/contents/?rest_route=/wp/v2/posts/${id}&_embed`;
+
+            try {
+                const res = await fetch(url);
+                if (!res.ok) {
+                    throw new Error("HTTP " + res.status);
+                }
+
+                const post = await res.json();
+
+                const title = stripHtml(post.title?.rendered || "Tanpa Judul");
+                const content = post.content?.rendered || "<p>Konten tidak tersedia.</p>";
+                const date = formatDate(post.date);
+                const author = post._embedded?.author?.[0]?.name || "Admin Sekolah";
+
+                let category = "Berita";
+                if (post.categories && post.categories.length > 0) {
+                    category = await getCategoryName(post.categories[0]);
+                }
+
+                document.title = title + " - SMK Negeri 1 Tanjung Selor";
+
+                const titleEl = document.getElementById("postTitle");
+                const contentEl = document.getElementById("postContent");
+                const dateEl = document.getElementById("postDate");
+                const authorEl = document.getElementById("postAuthor");
+                const badgeEl = document.getElementById("postCategoryBadge");
+                const breadcrumbEl = document.getElementById("breadcrumbCategory");
+                const heroEl = document.getElementById("postHero");
+                const tagContainer = document.getElementById("tagList");
+
+                const currentCategoryId = post.categories && post.categories.length > 0
+                    ? post.categories[0]
+                    : null;
+
+                if (titleEl) titleEl.textContent = title;
+                if (contentEl) contentEl.innerHTML = content;
+                if (dateEl) dateEl.textContent = date;
+                if (authorEl) authorEl.textContent = author;
+                if (badgeEl) badgeEl.textContent = category;
+                if (breadcrumbEl) breadcrumbEl.textContent = category;
+
+                const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "";
+
+                if (heroEl) {
+                    if (featuredImage) {
+                        heroEl.innerHTML = `
+                    <img src="${featuredImage}" alt="${title}" class="w-full h-full object-cover" loading="lazy">
+                `;
+                    } else {
+                        heroEl.innerHTML = `
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-slate-300">
+                        <i data-lucide="image" style="width: 100px; height: 100px; stroke-width: 1;"></i>
+                        <span class="text-xs font-black uppercase tracking-[0.3em] mt-4 opacity-50">Berita Utama S1</span>
+                    </div>
+                `;
+                    }
+                }
+
+                await loadRelatedPosts(post.id, currentCategoryId);
+
+                if (tagContainer) {
+                    tagContainer.innerHTML = "";
+
+                    if (post.tags && post.tags.length > 0) {
+                        const tagNames = await Promise.all(
+                            post.tags.map(function (tagId) {
+                                return getTagName(tagId);
+                            })
+                        );
+
+                        tagContainer.innerHTML = tagNames.map(function (tag) {
+                            return `
+                        <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-[10px] font-bold uppercase tracking-wide">
+                            #${tag}
+                        </span>
+                    `;
+                        }).join("");
+                    } else {
+                        tagContainer.innerHTML = `
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">
+                        Tidak ada tag
+                    </span>
+                `;
+                    }
+                }
+
+                refreshIcons();
+            } catch (error) {
+                document.getElementById("postContent").innerHTML = `
+            <div class="bg-white border border-slate-200 rounded-3xl p-8 text-center">
+                <p class="font-bold text-red-700">Gagal memuat artikel.</p>
+                <p class="text-slate-500 text-sm mt-2">${error.message}</p>
+            </div>
+        `;
+                console.error("Gagal load detail post:", error);
+            }
+        }
+
+
+        document.addEventListener("DOMContentLoaded", async function () {
+            await loadComponent("header-include", "../components/header.html");
+            await loadComponent("footer-include", "../components/footer.html");
+
+            await loadPostDetail();
+
+            refreshIcons();
+        });
+    </script>
+</body>
+
+</html>
